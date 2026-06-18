@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer id="contact" className="bg-paper text-charcoal border-t border-charcoal/10">
@@ -9,9 +11,12 @@ export default function Footer() {
             get back to you directly.
           </p>
         </div>
-        <div className="font-mono text-sm text-charcoal/70 space-y-1">
+        <div className="font-mono text-sm text-charcoal/70 space-y-1 text-right">
           <p>acastructure@gmail.com</p>
           <p className="text-charcoal/40">AcaStructure LLC</p>
+          <Link to="/terms" className="text-charcoal/40 hover:text-charcoal/70 underline block mt-1">
+            User Agreement
+          </Link>
         </div>
       </div>
     </footer>
