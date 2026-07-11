@@ -35,11 +35,11 @@ export default function GradPathPage() {
               GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your institution's academic bulletin.
             </p>
             <div className="flex flex-wrap gap-3 items-center">
-              <a href="#" className="inline-block no-underline">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 44 }} />
+              <a href="#" className="inline-flex items-center no-underline" style={{ height: 44 }}>
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 44, width: "auto", display: "block" }} />
               </a>
-              <a href="#" className="inline-block no-underline">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 44 }} />
+              <a href="#" className="inline-flex items-center no-underline" style={{ height: 44 }}>
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 44, width: "auto", display: "block" }} />
               </a>
             </div>
           </div>

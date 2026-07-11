@@ -77,8 +77,8 @@ export default function About() {
           <div style={{ width: 48, height: 2, background: "#B8860B", margin: "0 auto 48px" }} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full" style={{ maxWidth: 680, margin: "0 auto" }}>
             {[
-              { name: "Rick", img: rickHeadshot, roles: ["Philosophy student.", "Veteran.", "Systems thinker."], focus: "Focused on academic models, research, and product vision." },
-              { name: "Isabella", img: isabellaHeadshot, roles: ["Physics student.", "Veteran.", "Architect of the platform."], focus: "Focused on building reliable systems that people can trust." },
+              { name: "Rick", img: rickHeadshot, roles: ["Philosophy student.", "Veteran, USAF.", "Systems thinker."], focus: "Focused on academic models, research, and product vision." },
+              { name: "Isabella", img: isabellaHeadshot, roles: ["Physics student.", "Veteran, USAF.", "Architect of the platform."], focus: "Focused on building reliable systems that people can trust." },
             ].map(p => (
               <div key={p.name} className="flex gap-6 items-start">
                 <img src={p.img} alt={p.name} className="rounded-xl object-cover object-top shrink-0" style={{ width: 88, height: 108 }} />

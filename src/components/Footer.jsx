@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="font-display font-semibold text-base text-white">AcaStructure</span>
             </div>
             <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(250,250,247,0.5)" }}>
-              Building the bridges that connect students to higher education.
+              Building the bridges that connect students to modern degree pathways.
             </p>
           </div>
 
