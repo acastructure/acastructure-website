@@ -86,7 +86,7 @@ export default function GradPathPage() {
                 <div className="flex items-center justify-center mb-3">
                   <span className="w-8 h-8 rounded-full text-white font-body font-semibold text-sm flex items-center justify-center" style={{ background: "#1B3A0E" }}>{i + 1}</span>
                 </div>
-                <div className="bg-white rounded-2xl p-4 mb-4" style={{ border: "1px solid #E8E4D9" }}>
+                <div className="bg-white rounded-2xl p-4 mb-4" style={{ border: "1px solid #E8E4D9", minHeight: 110, display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
                   <h3 className="font-display font-semibold text-sm mb-2" style={{ color: "#1A1A2E" }}>{f.label}</h3>
                   <p className="font-body leading-relaxed" style={{ fontSize: 11, color: "#4A5568" }}>{f.desc}</p>
                 </div>
