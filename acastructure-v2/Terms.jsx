@@ -112,14 +112,14 @@ const sections = [
   {
     title: "15. Beta Release Notice",
     paragraphs: [
-      "GradPath is currently in a beta release phase. As a beta product, GradPath may contain errors, inaccuracies, or incomplete features. AcaStructure actively encourages users to report bugs, inaccuracies in degree requirement data, or any unexpected behavior to admin@acastructure.com.",
+      "GradPath is currently in a beta release phase. As a beta product, GradPath may contain errors, inaccuracies, or incomplete features. AcaStructure actively encourages users to report bugs, inaccuracies in degree requirement data, or any unexpected behavior to acastructure@gmail.com.",
       "Beta users acknowledge that the Service may be updated, modified, or temporarily unavailable during this phase, and agree to provide honest feedback to assist in the development and improvement of GradPath.",
     ],
   },
   {
     title: "16. Contact Information",
     paragraphs: [
-      "For questions about this Agreement, your account, or the GradPath Service, please contact admin@acastructure.com.",
+      "For questions about this Agreement, your account, or the GradPath Service, please contact acastructure@gmail.com.",
     ],
   },
 ];
@@ -167,7 +167,7 @@ export default function Terms() {
           ))}
 
           <p className="font-mono text-[11px] tracking-widest uppercase text-charcoal/40 mt-16 pt-8 border-t border-charcoal/10">
-            AcaStructure LLC — admin@acastructure.com
+            AcaStructure LLC — acastructure@gmail.com
           </p>
         </div>
       </section>
