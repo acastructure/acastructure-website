@@ -70,12 +70,12 @@ export default function About() {
 
       {/* TEAM */}
       <section className="py-16 px-6" style={{ background: "#FAFAF7" }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto text-center" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h2 className="font-display font-semibold text-center mb-3" style={{ fontSize: "clamp(22px, 3vw, 36px)", color: "#1A1A2E" }}>
             Built by people living the problem.
           </h2>
           <div style={{ width: 48, height: 2, background: "#B8860B", margin: "0 auto 48px" }} />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full" style={{ maxWidth: 680, margin: "0 auto" }}>
             {[
               { name: "Rick", img: rickHeadshot, roles: ["Philosophy student.", "Veteran.", "Systems thinker."], focus: "Focused on academic models, research, and product vision." },
               { name: "Isabella", img: isabellaHeadshot, roles: ["Physics student.", "Veteran.", "Architect of the platform."], focus: "Focused on building reliable systems that people can trust." },

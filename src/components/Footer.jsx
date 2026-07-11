@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <h4 className="font-mono text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "rgba(250,250,247,0.3)" }}>Products</h4>
             <div className="flex flex-col gap-2.5">
-              {[["GradPath", "/gradpath"], ["Partners", "/partners"], ["Get GradPath", "/gradpath"], ["Terms", "/terms"]].map(([l, t]) => (
+              {[["GradPath", "/gradpath"], ["Terms", "/terms"]].map(([l, t]) => (
                 <Link key={l} to={t} className="font-body text-sm no-underline" style={{ color: "rgba(250,250,247,0.55)" }}>{l}</Link>
               ))}
             </div>
