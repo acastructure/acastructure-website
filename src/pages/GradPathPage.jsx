@@ -34,12 +34,12 @@ export default function GradPathPage() {
             <p className="font-body leading-relaxed mb-8" style={{ fontSize: "clamp(14px, 1.4vw, 16px)", color: "#4A5568", maxWidth: 440 }}>
               GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your institution's academic bulletin.
             </p>
-            <div className="flex flex-wrap gap-3 items-center">
-              <a href="#" className="inline-flex items-center no-underline" style={{ height: 44 }}>
+            <div className="flex flex-wrap gap-2 items-center">
+              <a href="#" className="inline-block no-underline">
                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 44, width: "auto", display: "block" }} />
               </a>
-              <a href="#" className="inline-flex items-center no-underline" style={{ height: 44 }}>
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 44, width: "auto", display: "block" }} />
+              <a href="#" className="inline-block no-underline" style={{ marginTop: -6, marginBottom: -6 }}>
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 56, width: "auto", display: "block" }} />
               </a>
             </div>
           </div>
