@@ -7,6 +7,9 @@ import Partners from "./pages/Partners";
 import About from "./pages/About";
 import GetGradPath from "./pages/GetGradPath";
 import Terms from "./pages/Terms";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import BetaProgramAgreement from "./pages/BetaProgramAgreement";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/get-gradpath" element={<GetGradPath />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/beta-program-agreement" element={<BetaProgramAgreement />} />
       </Routes>
       <Footer />
     </BrowserRouter>
