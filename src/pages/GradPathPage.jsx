@@ -66,11 +66,17 @@ export default function GradPathPage() {
           </h2>
 
           {phones.map((p, i) => (
-            <div key={p.label} style={{ marginBottom: i < phones.length - 1 ? 96 : 0 }}>
+            <div key={p.label} style={{ marginBottom: i < phones.length - 1 ? 96 : 0, textAlign: "center" }}>
               <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(24px, 3vw, 32px)", color: "#D8D5CC", marginBottom: 12 }}>{p.label}</h3>
-              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.75, color: "rgba(216,213,204,0.5)", marginBottom: 36 }}>{p.desc}</p>
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <img src={p.src} alt={p.label} style={{ width: "100%", maxWidth: 360, height: "auto", borderRadius: 32, boxShadow: "0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(216,213,204,0.06)" }} />
+              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.75, color: "rgba(216,213,204,0.5)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>{p.desc}</p>
+              <div style={{ display: "flex", justifyContent: "center", position: "relative" }}>
+                <div style={{ position: "relative", width: "100%", maxWidth: 360 }}>
+                  <img src={p.src} alt={p.label} style={{ width: "100%", height: "auto", borderRadius: 32, display: "block", boxShadow: "0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(216,213,204,0.06)" }} />
+                  <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
+                  <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
+                  <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
+                  <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
+                </div>
               </div>
             </div>
           ))}
@@ -89,8 +95,8 @@ export default function GradPathPage() {
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {[
-              { label: "Now through Dec 2026", price: "Free", detail: "Full access during the beta period at SFSU and CCSF.", note: "No payment required.", green: false },
-              { label: "Starting Jan 1, 2027", price: "$12/mo", detail: "Continued access for accounts created during the beta.", note: "Cancel anytime.", green: true },
+              { label: "Now through Dec 2026", price: "Free", detail: "Full access during the beta period at SFSU and CCSF.", note: "No payment required." },
+              { label: "Starting Jan 1, 2027", price: "$12/mo", detail: "Continued access for accounts created during the beta.", note: "Cancel anytime." },
             ].map(p => (
               <div key={p.label} style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "24px 28px", border: "1px solid rgba(216,213,204,0.07)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
                 <div>
@@ -98,9 +104,7 @@ export default function GradPathPage() {
                   <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, color: "rgba(216,213,204,0.5)", marginBottom: 2 }}>{p.detail}</p>
                   <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.25)" }}>{p.note}</p>
                 </div>
-                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(22px, 2.5vw, 28px)", color: "#D8D5CC", whiteSpace: "nowrap" }}>
-                  {p.green ? <><span style={{ color: "#3A9A0A" }}>$</span>12/mo</> : p.price}
-                </p>
+                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(22px, 2.5vw, 28px)", color: "#D8D5CC", whiteSpace: "nowrap" }}>{p.price}</p>
               </div>
             ))}
           </div>
