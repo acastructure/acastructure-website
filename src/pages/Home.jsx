@@ -11,7 +11,7 @@ export default function Home() {
         {/* Green glow behind text */}
         <div style={{ position: "absolute", top: "10%", left: "-5%", width: "50%", height: "80%", background: "radial-gradient(ellipse at center, rgba(90,231,18,0.05) 0%, transparent 65%)", pointerEvents: "none" }} />
 
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 48px", width: "100%", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "center" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 48px", width: "100%", display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: 20, alignItems: "center" }}>
 
           {/* LEFT */}
           <div>
