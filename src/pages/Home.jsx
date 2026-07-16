@@ -37,7 +37,7 @@ export default function Home() {
 
           {/* RIGHT — phone with vignette */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
-            <img src={heroPhone} alt="GradPath app" style={{ width: "100%", maxWidth: 760, height: "auto", display: "block" }} />
+            <img src={heroPhone} alt="GradPath app" style={{ width: "100%", maxWidth: 1140, height: "auto", display: "block" }} />
             {/* Fade left edge into black */}
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 20%)", pointerEvents: "none" }} />
             {/* Fade top edge */}
