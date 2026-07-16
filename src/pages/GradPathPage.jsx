@@ -20,7 +20,7 @@ export default function GradPathPage() {
     <div style={{ background: "#000", overflowX: "hidden" }}>
 
       {/* HERO — full bleed student photo with text overlay */}
-      <section style={{ position: "relative", height: "90vh", overflow: "hidden", display: "flex", alignItems: "center" }}>
+      <section style={{ position: "relative", height: "90vh", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
         <img src={gradpathStudent} alt="Student using GradPath" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }} />
         {/* Dark overlay */}
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.55)" }} />
@@ -30,7 +30,7 @@ export default function GradPathPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 20%)" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)" }} />
         {/* Content */}
-        <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center", width: "100%" }}>
+        <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 48px 80px", textAlign: "center", width: "100%" }}>
           <div style={{ marginBottom: 20 }}>
             <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", margin: 0 }}>
               Every course.<br /><span style={{ color: "#3A9A0A" }}>One clear path.</span>
@@ -40,7 +40,7 @@ export default function GradPathPage() {
             GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your institution's academic bulletin.
           </p>
           {/* Logo between subtext and app store badges */}
-          <div style={{ marginBottom: 32 }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
             <img src={logoGradPath} alt="GradPath" style={{ height: "clamp(40px, 5vw, 64px)", width: "auto" }} />
           </div>
           {/* App store badges */}
