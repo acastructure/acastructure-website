@@ -14,13 +14,13 @@ export default function Home() {
         <div style={{ position: "relative", maxWidth: 900, margin: "0 auto", padding: "0 48px" }}>
 
           {/* Eyebrow */}
-          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#4CC40F", marginBottom: 32 }}>
+          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D8D5CC", marginBottom: 32 }}>
             Academic Infrastructure
           </p>
 
           {/* Headline */}
           <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(40px, 6vw, 80px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 28 }}>
-            Degree clarity now<br />in the palm of<br />
+            Degree clarity<br />in the palm of<br />
             <span style={{ color: "#4CC40F" }}>students' hands.</span>
           </h1>
 
