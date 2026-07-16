@@ -37,7 +37,6 @@ export default function Footer() {
             <h4 style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(216,213,204,0.28)", marginBottom: 16 }}>Products</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>GradPath</Link>
-              <Link to="/terms" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Terms</Link>
             </div>
           </div>
 
