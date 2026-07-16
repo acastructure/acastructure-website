@@ -24,7 +24,7 @@ export default function Partners() {
       {/* HERO — text on top, image below */}
       <section style={{ background: "#000", paddingTop: 80 }}>
         <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center" }}>
-          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#3A9A0A", marginBottom: 24 }}>Academic Partnerships</p>
+          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D8D5CC", marginBottom: 24 }}>Academic Partnerships</p>
           <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 20 }}>
             Let's build<br /><span style={{ color: "#3A9A0A" }}>together.</span>
           </h1>
