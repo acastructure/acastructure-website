@@ -20,11 +20,14 @@ export default function GradPathPage() {
 
       {/* HERO — full bleed student photo with text overlay */}
       <section style={{ position: "relative", height: "90vh", overflow: "hidden", display: "flex", alignItems: "center" }}>
-        <img src={gradpathStudent} alt="Student using GradPath" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+        <img src={gradpathStudent} alt="Student using GradPath" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }} />
         {/* Dark overlay */}
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.55)" }} />
-        {/* Vignette bottom */}
+        {/* Vignettes all edges */}
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 40%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 25%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 20%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)" }} />
         {/* Content */}
         <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center", width: "100%" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#3A9A0A", marginBottom: 24 }}>GradPath</p>
@@ -86,16 +89,15 @@ export default function GradPathPage() {
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#3A9A0A", textAlign: "center", marginBottom: 12 }}>Transparent pricing</p>
           <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 42px)", color: "#D8D5CC", textAlign: "center", lineHeight: 1.1, marginBottom: 8 }}>
-            Transparent today.<br />Fair tomorrow.
+            No Pay Walls. No Ads. No BS.
           </h2>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, color: "rgba(216,213,204,0.45)", textAlign: "center", marginBottom: 48 }}>
-            During our beta at SF State and CCSF, GradPath is completely free.
+            We believe in transparency, not hidden access and fees.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {[
-              { label: "Now through Dec 2026", price: "Free", detail: "Full access during the beta period at SFSU and CCSF.", note: "No payment required.", color: "#4A9FE8" },
-              { label: "Starting Jan 1, 2027", price: "$12/mo", detail: "Continued access for accounts created during the beta.", note: "Cancel anytime.", color: "#B8860B" },
-              { label: "Founding Beta Members", price: "Free for life", detail: "Permanent access for the original founding group.", note: "Never billed.", color: "#3A9A0A" },
+              { label: "Now through Dec 2026", price: "Free", detail: "Full access during the beta period at SFSU and CCSF.", note: "No payment required.", color: "#D8D5CC" },
+              { label: "Starting Jan 1, 2027", price: "$12/mo", detail: "Continued access for accounts created during the beta.", note: "Cancel anytime.", color: "#D8D5CC" },
             ].map(p => (
               <div key={p.label} style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "24px 28px", border: "1px solid rgba(216,213,204,0.07)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
                 <div>
