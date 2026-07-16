@@ -20,7 +20,7 @@ export default function Footer() {
               <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 16, color: "#D8D5CC" }}>AcaStructure</span>
             </div>
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(232,228,217,0.5)", maxWidth: 240 }}>
-              Building the bridges that connect students to modern degree pathways.
+              Building clarity where it's needed most.
             </p>
           </div>
 
