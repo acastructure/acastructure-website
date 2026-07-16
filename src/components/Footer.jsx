@@ -11,7 +11,7 @@ export default function Footer() {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "56px 48px" }}>
 
         {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr", gap: 40, paddingBottom: 40, borderBottom: `1px solid rgba(232,228,217,0.1)` }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr", gap: 40, paddingBottom: 40, borderBottom: `1px solid rgba(232,228,217,0.1)` }}>
 
           {/* Brand */}
           <div>
@@ -38,6 +38,16 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>GradPath</Link>
               <Link to="/terms" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Terms</Link>
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(216,213,204,0.28)", marginBottom: 16 }}>Legal</h4>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <Link to="/privacy-policy" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Privacy Policy</Link>
+              <Link to="/terms-of-service" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Terms of Service</Link>
+              <Link to="/beta-program-agreement" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Beta Program Agreement</Link>
             </div>
           </div>
 
