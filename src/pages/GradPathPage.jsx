@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import gradpathStudent from "../assets/gradpath_student.webp";
-import gradpathStudents from "../assets/gradpath_students.webp";
 import phoneTranscript from "../assets/phone_transcript.webp";
 import phoneDegreeMap from "../assets/phone_degree_map.webp";
 import phoneSemester from "../assets/phone_semester.webp";
@@ -67,31 +66,6 @@ export default function GradPathPage() {
 
       </section>
 
-      {/* VALUE PROPS */}
-      <section style={{ background: "#0A0A0A", padding: "80px 80px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#3A9A0A", textAlign: "center", marginBottom: 16 }}>Built for students</p>
-          <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(28px, 3.5vw, 44px)", color: "#D8D5CC", textAlign: "center", marginBottom: 56, lineHeight: 1.2 }}>
-            Everything you need.<br /><span style={{ color: "#3A9A0A" }}>Exactly</span> when you need it.
-          </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 40 }}>
-            {[
-              { title: "Know where you stand.", desc: "See your completed courses, in-progress classes, GE fulfillment, and every requirement in one place." },
-              { title: "Know where you're going.", desc: "Explore your full Degree Map, plan smarter semesters, and stay on track toward graduation." },
-              { title: "Know what's possible.", desc: "Evaluate transfer options, model degree changes, and understand the impact before you decide." },
-            ].map(v => (
-              <div key={v.title} style={{ textAlign: "center" }}>
-                <div style={{ width: 52, height: 52, borderRadius: "50%", border: "1px solid rgba(216,213,204,0.15)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
-                  <svg width="20" height="20" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                </div>
-                <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 18, color: "#D8D5CC", marginBottom: 12 }}>{v.title}</h3>
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(216,213,204,0.5)" }}>{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* PHONE SCREENSHOTS — dark section */}
       <section style={{ background: "#000", padding: "80px 48px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -118,45 +92,35 @@ export default function GradPathPage() {
       </section>
 
       {/* PRICING */}
-      <section style={{ background: "#0A0A0A", padding: "80px 80px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
-          <div>
-            <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#3A9A0A", marginBottom: 16 }}>Built to earn your trust first</p>
-            <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(28px, 3.5vw, 46px)", color: "#D8D5CC", lineHeight: 1.1, marginBottom: 20 }}>
-              Transparent today.<br />Fair tomorrow.
-            </h2>
-            <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(14px, 1.4vw, 16px)", lineHeight: 1.75, color: "rgba(216,213,204,0.55)", marginBottom: 32 }}>
-              During our beta at SF State and CCSF, GradPath is completely free.
-            </p>
-            <img src={gradpathStudents} alt="Students using GradPath" style={{ width: "100%", borderRadius: 16 }} />
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+      <section style={{ background: "#0A0A0A", padding: "80px 48px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#3A9A0A", textAlign: "center", marginBottom: 12 }}>Transparent pricing</p>
+          <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(28px, 3.5vw, 44px)", color: "#D8D5CC", textAlign: "center", lineHeight: 1.1, marginBottom: 8 }}>
+            Transparent today. Fair tomorrow.
+          </h2>
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, color: "rgba(216,213,204,0.5)", textAlign: "center", marginBottom: 48 }}>
+            During our beta at SF State and CCSF, GradPath is completely free.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
             {[
-              { label: "Now through Dec 2026", price: "Free", detail: "Full access during the beta period at SFSU and CCSF.", note: "No payment required.", color: "#4A9FE8" },
-              { label: "Starting Jan 1, 2027", price: "$12/mo", detail: "Continued access for accounts created during the beta.", note: "Cancel anytime.", color: "#B8860B" },
+              { label: "Now through Dec 2026", price: "Free", detail: "Full access during the beta period.", note: "No payment required.", color: "#4A9FE8" },
+              { label: "Starting Jan 1, 2027", price: "$12/mo", detail: "Continued access for beta accounts.", note: "Cancel anytime.", color: "#B8860B" },
               { label: "Founding Beta Members", price: "Free for life", detail: "Permanent access for the original founding group.", note: "Never billed.", color: "#3A9A0A" },
             ].map(p => (
-              <div key={p.label} style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: 24, border: "1px solid rgba(216,213,204,0.08)" }}>
-                <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(216,213,204,0.3)", marginBottom: 8 }}>{p.label}</p>
-                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(20px, 2.5vw, 26px)", color: p.color, marginBottom: 8 }}>{p.price}</p>
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, color: "rgba(216,213,204,0.55)" }}>{p.detail}</p>
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.3)", marginTop: 4 }}>{p.note}</p>
+              <div key={p.label} style={{ background: "rgba(216,213,204,0.03)", borderRadius: 20, padding: "32px 24px", border: "1px solid rgba(216,213,204,0.08)", textAlign: "center" }}>
+                <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(216,213,204,0.3)", marginBottom: 16 }}>{p.label}</p>
+                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(24px, 2.5vw, 32px)", color: p.color, marginBottom: 16, lineHeight: 1.1 }}>{p.price}</p>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.5)", lineHeight: 1.7, marginBottom: 8 }}>{p.detail}</p>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.25)" }}>{p.note}</p>
               </div>
             ))}
-            <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.25)", textAlign: "center" }}>
-              🔒 Subscriptions are billed directly through AcaStructure, not the App Store.
-            </p>
           </div>
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.2)", textAlign: "center", marginTop: 24 }}>
+            🔒 Subscriptions are billed directly through AcaStructure, not the App Store.
+          </p>
         </div>
       </section>
 
-      {/* TAGLINE */}
-      <section style={{ background: "#000", padding: "64px 48px", textAlign: "center", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
-        <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 44px)", color: "#D8D5CC", lineHeight: 1.15 }}>
-          Built by one of you.<br />For all of us.
-        </h2>
-        <div style={{ width: 48, height: 2, background: "#3A9A0A", margin: "20px auto 0" }} />
-      </section>
 
     </div>
   );
