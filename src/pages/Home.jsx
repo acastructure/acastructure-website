@@ -42,7 +42,7 @@ export default function Home() {
         </div>
 
         {/* Phone image — full width, centered, large */}
-        <div style={{ position: "relative", maxWidth: 900, margin: "0 auto" }}>
+        <div style={{ position: "relative", maxWidth: 800, margin: "0 auto" }}>
           <img
             src={heroPhone}
             alt="GradPath app on iPhone"
@@ -66,11 +66,9 @@ export default function Home() {
           From one of us, for all of us.
         </p>
         <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(216,213,204,0.3)", marginTop: 16 }}>
-          Built by students at SFSU — for students across academia
+          Built by students, for students across academia
         </p>
-        <Link to="/about" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#4CC40F", textDecoration: "none", display: "inline-block", marginTop: 24 }}>
-          Our story →
-        </Link>
+
       </section>
 
     </div>
