@@ -19,32 +19,24 @@ export default function GradPathPage() {
   return (
     <div style={{ background: "#000", overflowX: "hidden" }}>
 
-      {/* HERO — full bleed student photo with text overlay */}
-      <section style={{ position: "relative", height: "90vh", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
-        <img src={gradpathStudent} alt="Student using GradPath" style={{ position: "absolute", inset: 0, width: "70%", height: "100%", objectFit: "cover", objectPosition: "center 50%", left: "30%", right: 0 }} />
-        {/* Dark overlay */}
-        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)" }} />
-        {/* Vignettes all edges */}
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 45%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 20%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, rgba(0,0,0,0.95) 35%, transparent 70%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, rgba(0,0,0,0.5) 15%, transparent 35%)" }} />
-        {/* Content */}
-        <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 48px 80px", textAlign: "center", width: "100%" }}>
+      {/* HERO — text block on top, image below with buttons overlapping */}
+      <section style={{ background: "#000", paddingTop: 80 }}>
+        {/* Text content */}
+        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center" }}>
           <div style={{ marginBottom: 20 }}>
             <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", margin: 0 }}>
               Every course.<br /><span style={{ color: "#3A9A0A" }}>One clear path.</span>
             </h1>
           </div>
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", marginBottom: 32, maxWidth: 560, margin: "0 auto 32px" }}>
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", maxWidth: 560, margin: "0 auto 32px" }}>
             GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your institution's academic bulletin.
           </p>
-          {/* Logo between subtext and app store badges */}
+          {/* Logo */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
             <img src={logoGradPath} alt="GradPath" style={{ height: "clamp(40px, 5vw, 64px)", width: "auto" }} />
           </div>
-          {/* App store badges */}
-          <div style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center" }}>
+          {/* App store badges — sit just above the image */}
+          <div style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center", position: "relative", zIndex: 2, marginBottom: -24 }}>
             <a href="#" style={{ display: "inline-block", textDecoration: "none" }}>
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 40, width: "auto", display: "block" }} />
             </a>
@@ -52,6 +44,17 @@ export default function GradPathPage() {
               <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 58, width: "auto", display: "block" }} />
             </a>
           </div>
+        </div>
+
+        {/* Hero image below, buttons slightly overlap top */}
+        <div style={{ position: "relative", width: "100%", height: "60vh", overflow: "hidden" }}>
+          <img src={gradpathStudent} alt="Student using GradPath" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
+          {/* Vignettes */}
+          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 40%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 30%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 20%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)" }} />
         </div>
       </section>
 
