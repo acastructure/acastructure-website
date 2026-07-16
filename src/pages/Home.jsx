@@ -63,7 +63,7 @@ export default function Home() {
       {/* TAGLINE */}
       <section style={{ background: "#000", padding: "64px 48px", textAlign: "center", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
         <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(22px, 3vw, 38px)", color: "#D8D5CC" }}>
-          From one of us, for all of us.
+          From one of you, for all of us.
         </p>
         <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(216,213,204,0.3)", marginTop: 16 }}>
           Built by students, for students across academia
