@@ -60,10 +60,7 @@ export default function GradPathPage() {
       {/* PHONE SCREENSHOTS — vertical scroll */}
       <section style={{ background: "#000", padding: "80px 48px" }}>
         <div style={{ maxWidth: 600, margin: "0 auto" }}>
-          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 16 }}>Core Features</p>
-          <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(26px, 3.5vw, 40px)", color: "#D8D5CC", textAlign: "center", marginBottom: 80 }}>
-            Everything working together.
-          </h2>
+          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 80 }}>Core Features</p>
 
           {phones.map((p, i) => (
             <div key={p.label} style={{ marginBottom: i < phones.length - 1 ? 96 : 0, textAlign: "center" }}>
