@@ -21,7 +21,7 @@ export default function Home() {
           {/* Headline */}
           <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(40px, 6vw, 80px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 28 }}>
             Degree clarity<br />in the palm of<br />
-            <span style={{ color: "#4CC40F" }}>students' hands.</span>
+            <span style={{ color: "#3A9A0A" }}>students' hands.</span>
           </h1>
 
           {/* Subtext */}
@@ -31,7 +31,7 @@ export default function Home() {
 
           {/* Buttons */}
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center", justifyContent: "center", marginBottom: 72 }}>
-            <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 600, color: "#0A0A0A", background: "#4CC40F", padding: "14px 32px", borderRadius: 8, textDecoration: "none", display: "inline-block" }}>
+            <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 600, color: "#0A0A0A", background: "#3A9A0A", padding: "14px 32px", borderRadius: 8, textDecoration: "none", display: "inline-block" }}>
               Get GradPath
             </Link>
             <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 500, color: "#D8D5CC", background: "transparent", border: "1px solid rgba(216,213,204,0.25)", padding: "13px 32px", borderRadius: 8, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}>

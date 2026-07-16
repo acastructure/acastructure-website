@@ -18,7 +18,7 @@ export default function TermsOfService() {
   return (
     <div style={{ background: "#000", minHeight: "100vh", color: "#D8D5CC" }}>
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "80px 48px" }}>
-        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#4CC40F", marginBottom: 16 }}>AcaStructure LLC</p>
+        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#3A9A0A", marginBottom: 16 }}>AcaStructure LLC</p>
         <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(32px, 4vw, 48px)", color: "#D8D5CC", marginBottom: 8 }}>Terms of Service</h1>
         <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, color: "rgba(216,213,204,0.4)", marginBottom: 64 }}>Effective Date: July 2026</p>
         {sections.map((s, i) => (

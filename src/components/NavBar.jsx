@@ -27,7 +27,7 @@ export default function NavBar() {
           {NAV_LINKS.map(l => {
             const active = location.pathname === l.to;
             return (
-              <Link key={l.to} to={l.to} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, textDecoration: "none", color: active ? "#fff" : "rgba(255,255,255,0.55)", borderBottom: active ? "2px solid #4CC40F" : "2px solid transparent", paddingBottom: 2, transition: "color 0.15s" }}>
+              <Link key={l.to} to={l.to} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, textDecoration: "none", color: active ? "#fff" : "rgba(255,255,255,0.55)", borderBottom: active ? "2px solid #3A9A0A" : "2px solid transparent", paddingBottom: 2, transition: "color 0.15s" }}>
                 {l.label}
               </Link>
             );
@@ -36,11 +36,11 @@ export default function NavBar() {
 
         {/* Right side */}
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#4CC40F", padding: "9px 20px", borderRadius: 8, textDecoration: "none", display: "none" }} className="hidden md:inline-block">
+          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#3A9A0A", padding: "9px 20px", borderRadius: 8, textDecoration: "none", display: "none" }} className="hidden md:inline-block">
             Get GradPath
           </Link>
           {/* Show on desktop */}
-          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#4CC40F", padding: "9px 20px", borderRadius: 8, textDecoration: "none" }}>
+          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#3A9A0A", padding: "9px 20px", borderRadius: 8, textDecoration: "none" }}>
             Get GradPath
           </Link>
           {/* Hamburger - only on mobile via CSS */}
@@ -60,7 +60,7 @@ export default function NavBar() {
               {l.label}
             </Link>
           ))}
-          <Link to="/gradpath" onClick={() => setOpen(false)} style={{ display: "block", fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#000", background: "#4CC40F", padding: "12px 20px", borderRadius: 8, textDecoration: "none", textAlign: "center", marginTop: 16 }}>
+          <Link to="/gradpath" onClick={() => setOpen(false)} style={{ display: "block", fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#000", background: "#3A9A0A", padding: "12px 20px", borderRadius: 8, textDecoration: "none", textAlign: "center", marginTop: 16 }}>
             Get GradPath
           </Link>
         </div>
