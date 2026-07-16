@@ -101,7 +101,7 @@ export default function GradPathPage() {
             ))}
           </div>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.2)", textAlign: "center", marginTop: 20 }}>
-            🔒 Subscriptions are billed directly through AcaStructure, not the App Store.
+            🔒 Subscriptions are billed directly through AcaStructure via Stripe.
           </p>
         </div>
       </section>
