@@ -31,12 +31,13 @@ export default function GradPathPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)" }} />
         {/* Content */}
         <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center", width: "100%" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "clamp(12px, 2vw, 24px)", marginBottom: 20 }}>
-            <img src={logoGradPath} alt="GradPath" style={{ height: "clamp(60px, 8vw, 96px)", width: "auto", flexShrink: 0 }} />
-            <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", margin: 0, textAlign: "left" }}>
-              Every course.<br /><span style={{ color: "#3A9A0A" }}>One clear path.</span>
-            </h1>
-          </div>
+          <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.1, color: "#D8D5CC", marginBottom: 20, textAlign: "center" }}>
+            <span style={{ display: "block", paddingLeft: "clamp(60px, 9vw, 112px)" }}>Every course.</span>
+            <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "clamp(10px, 1.5vw, 20px)" }}>
+              <img src={logoGradPath} alt="GradPath" style={{ height: "clamp(48px, 6.5vw, 84px)", width: "auto", flexShrink: 0 }} />
+              <span style={{ color: "#3A9A0A" }}>One clear path.</span>
+            </span>
+          </h1>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", marginBottom: 40, maxWidth: 560, margin: "0 auto 40px" }}>
             GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your institution's academic bulletin.
           </p>
