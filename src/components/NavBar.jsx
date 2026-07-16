@@ -13,7 +13,7 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10" style={{ background: "#0A1628" }}>
+    <nav className="sticky top-0 z-50 border-b border-white/10" style={{ background: "#000", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
         {/* Logo */}
@@ -51,7 +51,7 @@ export default function NavBar() {
 
       {/* Mobile dropdown */}
       {open && (
-        <div className="md:hidden border-t border-white/10 px-6 pb-6" style={{ background: "#112240" }}>
+        <div className="md:hidden border-t border-white/10 px-6 pb-6" style={{ background: "#0D0D0D" }}>
           {NAV_LINKS.map(l => (
             <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="block font-body text-base no-underline py-3 border-b border-white/5" style={{ color: "rgba(250,250,247,0.8)" }}>
               {l.label}
