@@ -27,8 +27,8 @@ export default function GradPathPage() {
         {/* Vignettes all edges */}
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 45%)" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 20%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, rgba(0,0,0,0.85) 25%, transparent 65%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 35%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, rgba(0,0,0,0.95) 35%, transparent 70%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, rgba(0,0,0,0.85) 20%, transparent 50%)" }} />
         {/* Content */}
         <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 48px 80px", textAlign: "center", width: "100%" }}>
           <div style={{ marginBottom: 20 }}>
