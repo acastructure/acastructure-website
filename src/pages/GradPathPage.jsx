@@ -40,10 +40,10 @@ export default function GradPathPage() {
           {/* App store badges */}
           <div style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center" }}>
             <a href="#" style={{ display: "inline-block", textDecoration: "none" }}>
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 44, width: "auto", display: "block" }} />
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 40, width: "auto", display: "block" }} />
             </a>
             <a href="#" style={{ display: "inline-block", textDecoration: "none" }}>
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 44, width: "auto", display: "block" }} />
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 58, width: "auto", display: "block" }} />
             </a>
           </div>
         </div>
