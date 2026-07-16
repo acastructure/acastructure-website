@@ -13,51 +13,54 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10" style={{ background: "#000", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <nav style={{ background: "#000", position: "sticky", top: 0, zIndex: 50, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 48px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
         {/* Logo */}
-        <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5 shrink-0 no-underline">
-          <img src={acaLogo} alt="AcaStructure" className="h-9 w-auto" />
-          <span className="font-display font-semibold text-lg text-white tracking-tight">AcaStructure</span>
+        <Link to="/" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", flexShrink: 0 }}>
+          <img src={acaLogo} alt="AcaStructure" style={{ height: 36, width: "auto" }} />
+          <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 18, color: "#fff", letterSpacing: "-0.01em" }}>AcaStructure</span>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop links */}
+        <div style={{ display: "flex", alignItems: "center", gap: 36 }}>
           {NAV_LINKS.map(l => {
             const active = location.pathname === l.to;
             return (
-              <Link key={l.to} to={l.to} className="font-body text-sm no-underline transition-colors" style={{ color: active ? "#FAFAF7" : "rgba(250,250,247,0.6)", borderBottom: active ? "2px solid #5AE712" : "2px solid transparent", paddingBottom: 2 }}>
+              <Link key={l.to} to={l.to} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, textDecoration: "none", color: active ? "#fff" : "rgba(255,255,255,0.55)", borderBottom: active ? "2px solid #5AE712" : "2px solid transparent", paddingBottom: 2, transition: "color 0.15s" }}>
                 {l.label}
               </Link>
             );
           })}
         </div>
 
-        <div className="flex items-center gap-3">
-          {/* Desktop CTA */}
-          <Link to="/gradpath" className="hidden md:inline-block font-body text-sm font-semibold no-underline px-5 py-2.5 rounded-lg" style={{ color: "#0A1628", background: "#5AE712" }}>
+        {/* Right side */}
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#5AE712", padding: "9px 20px", borderRadius: 8, textDecoration: "none", display: "none" }} className="hidden md:inline-block">
             Get GradPath
           </Link>
-
-          {/* Mobile hamburger */}
-          <button onClick={() => setOpen(!open)} className="md:hidden text-white bg-transparent border-0 cursor-pointer p-1" aria-label="Menu">
-            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+          {/* Show on desktop */}
+          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#5AE712", padding: "9px 20px", borderRadius: 8, textDecoration: "none" }}>
+            Get GradPath
+          </Link>
+          {/* Hamburger - only on mobile via CSS */}
+          <button onClick={() => setOpen(!open)} style={{ background: "none", border: "none", cursor: "pointer", color: "#fff", padding: 4, display: "none" }} id="nav-hamburger" aria-label="Menu">
+            <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
               {open ? <path d="M6 18L18 6M6 6l12 12"/> : <path d="M3 6h18M3 12h18M3 18h18"/>}
             </svg>
           </button>
         </div>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-white/10 px-6 pb-6" style={{ background: "#0D0D0D" }}>
+        <div style={{ background: "#0D0D0D", borderTop: "1px solid rgba(255,255,255,0.08)", padding: "16px 48px 24px" }}>
           {NAV_LINKS.map(l => (
-            <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="block font-body text-base no-underline py-3 border-b border-white/5" style={{ color: "rgba(250,250,247,0.8)" }}>
+            <Link key={l.to} to={l.to} onClick={() => setOpen(false)} style={{ display: "block", fontFamily: "Inter, sans-serif", fontSize: 16, color: "rgba(255,255,255,0.8)", textDecoration: "none", padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
               {l.label}
             </Link>
           ))}
-          <Link to="/gradpath" onClick={() => setOpen(false)} className="block font-body text-sm font-semibold no-underline text-center mt-4 py-3 rounded-lg" style={{ color: "#0A1628", background: "#5AE712" }}>
+          <Link to="/gradpath" onClick={() => setOpen(false)} style={{ display: "block", fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#000", background: "#5AE712", padding: "12px 20px", borderRadius: 8, textDecoration: "none", textAlign: "center", marginTop: 16 }}>
             Get GradPath
           </Link>
         </div>

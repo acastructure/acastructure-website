@@ -3,78 +3,51 @@ import heroPhone from "../assets/hero_phone.webp";
 
 export default function Home() {
   return (
-    <div className="font-body overflow-x-hidden" style={{ background: "#000" }}>
+    <div style={{ background: "#000", overflowX: "hidden" }}>
 
       {/* HERO */}
-      <section className="relative overflow-hidden" style={{ background: "#000", minHeight: "100vh" }}>
+      <section style={{ background: "#000", minHeight: "100vh", display: "flex", alignItems: "center", position: "relative", overflow: "hidden" }}>
 
-        {/* Subtle radial glow behind text on left */}
-        <div style={{
-          position: "absolute",
-          top: "20%",
-          left: "-10%",
-          width: "60%",
-          height: "70%",
-          background: "radial-gradient(ellipse at center, rgba(90,231,18,0.04) 0%, transparent 70%)",
-          pointerEvents: "none",
-        }} />
+        {/* Green glow behind text */}
+        <div style={{ position: "absolute", top: "10%", left: "-5%", width: "50%", height: "80%", background: "radial-gradient(ellipse at center, rgba(90,231,18,0.05) 0%, transparent 65%)", pointerEvents: "none" }} />
 
-        <div className="max-w-7xl mx-auto px-6 h-full" style={{ minHeight: "100vh", display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", gap: 40 }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 48px", width: "100%", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "center" }}>
 
-          {/* LEFT — copy */}
-          <div style={{ paddingTop: 40, paddingBottom: 40 }}>
-            {/* Eyebrow */}
-            <p className="font-mono text-xs uppercase tracking-widest mb-8" style={{ color: "#5AE712", letterSpacing: "0.25em" }}>
+          {/* LEFT */}
+          <div>
+            <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#5AE712", marginBottom: 32 }}>
               Academic Infrastructure
             </p>
-
-            {/* Headline */}
-            <h1 className="font-display font-bold leading-tight mb-6" style={{ fontSize: "clamp(36px, 5vw, 68px)", color: "#fff" }}>
+            <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1.05, color: "#fff", marginBottom: 24 }}>
               Degree clarity now<br />in the palm of<br />
               <span style={{ color: "#5AE712" }}>students' hands.</span>
             </h1>
-
-            {/* Subtext */}
-            <p className="font-body leading-relaxed mb-10" style={{ fontSize: "clamp(15px, 1.5vw, 18px)", color: "rgba(255,255,255,0.55)", maxWidth: 460 }}>
+            <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(255,255,255,0.5)", maxWidth: 460, marginBottom: 40 }}>
               Universities build extraordinary degree pathways. We simply put them in students' hands.
             </p>
-
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4 items-center">
-              <Link
-                to="/gradpath"
-                className="font-body font-semibold no-underline px-7 py-3.5 rounded-lg text-sm transition-all"
-                style={{ background: "#5AE712", color: "#000", fontSize: 15 }}
-              >
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
+              <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 600, color: "#000", background: "#5AE712", padding: "14px 28px", borderRadius: 8, textDecoration: "none", display: "inline-block" }}>
                 Get GradPath
               </Link>
-              <Link
-                to="/gradpath"
-                className="font-body font-medium no-underline px-7 py-3.5 rounded-lg text-sm flex items-center gap-2.5 transition-all"
-                style={{ background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.3)", fontSize: 15 }}
-              >
+              <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 500, color: "#fff", background: "transparent", border: "1px solid rgba(255,255,255,0.25)", padding: "13px 28px", borderRadius: 8, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}>
                 <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 See how it works
               </Link>
             </div>
           </div>
 
-          {/* RIGHT — phone mockup */}
-          <div className="flex items-center justify-center" style={{ paddingTop: 40, paddingBottom: 40 }}>
-            <img
-              src={heroPhone}
-              alt="GradPath app on iPhone"
-              style={{ width: "100%", maxWidth: 680, height: "auto", display: "block" }}
-            />
+          {/* RIGHT — phone */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <img src={heroPhone} alt="GradPath app" style={{ width: "100%", maxWidth: 640, height: "auto", display: "block" }} />
           </div>
 
         </div>
       </section>
 
       {/* BRIDGE STATEMENT */}
-      <section className="py-16 px-6" style={{ background: "#0A0A0A" }}>
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="font-display font-semibold leading-snug" style={{ fontSize: "clamp(18px, 2.5vw, 28px)", color: "#fff" }}>
+      <section style={{ background: "#0A0A0A", padding: "64px 48px" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(18px, 2.5vw, 28px)", color: "#fff", lineHeight: 1.4 }}>
             Connecting two perspectives.{" "}
             <span style={{ color: "#5AE712" }}>One shared destination.</span>
           </p>
@@ -82,14 +55,14 @@ export default function Home() {
       </section>
 
       {/* TAGLINE */}
-      <section className="py-16 px-6 text-center" style={{ background: "#0A0A0A" }}>
-        <p className="font-display font-semibold" style={{ fontSize: "clamp(22px, 3vw, 38px)", color: "#fff" }}>
+      <section style={{ background: "#0A0A0A", padding: "64px 48px", textAlign: "center", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+        <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(22px, 3vw, 38px)", color: "#fff" }}>
           From one of us, for all of us.
         </p>
-        <p className="font-mono text-xs uppercase tracking-widest mt-4" style={{ color: "rgba(255,255,255,0.35)", letterSpacing: "0.15em" }}>
+        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginTop: 16 }}>
           Built by students at SFSU — for students across academia
         </p>
-        <Link to="/about" className="font-body font-semibold no-underline inline-block mt-6" style={{ color: "#5AE712", fontSize: 14 }}>
+        <Link to="/about" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#5AE712", textDecoration: "none", display: "inline-block", marginTop: 24 }}>
           Our story →
         </Link>
       </section>
