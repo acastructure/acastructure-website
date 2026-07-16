@@ -74,7 +74,6 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ paddingTop: 20, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.28)" }}>© 2026 AcaStructure. All rights reserved.</p>
-          <Link to="/terms" style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.28)", textDecoration: "none" }}>User Agreement</Link>
         </div>
       </div>
     </footer>
