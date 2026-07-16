@@ -21,7 +21,7 @@ export default function GradPathPage() {
 
       {/* HERO — full bleed student photo with text overlay */}
       <section style={{ position: "relative", height: "90vh", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
-        <img src={gradpathStudent} alt="Student using GradPath" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "70% 50%" }} />
+        <img src={gradpathStudent} alt="Student using GradPath" style={{ position: "absolute", inset: 0, width: "70%", height: "100%", objectFit: "cover", objectPosition: "center 50%", left: "30%", right: 0 }} />
         {/* Dark overlay */}
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)" }} />
         {/* Vignettes all edges */}
