@@ -19,8 +19,7 @@ export default function Home() {
               Academic Infrastructure
             </p>
             <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 4.8vw, 70px)", lineHeight: 1.05, color: "#fff", marginBottom: 24 }}>
-              Degree clarity<br />now in the palm of<br />
-              <span style={{ color: "#5AE712" }}>students' hands.</span>
+              Degree clarity now<br />in the palm of<br /><span style={{ color: "#5AE712" }}>students' hands.</span>
             </h1>
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(255,255,255,0.5)", maxWidth: 460, marginBottom: 40 }}>
               Universities build extraordinary degree pathways. We simply put them in students' hands.
@@ -38,7 +37,7 @@ export default function Home() {
 
           {/* RIGHT — phone with vignette */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-            <img src={heroPhone} alt="GradPath app" style={{ width: "100%", maxWidth: 640, height: "auto", display: "block" }} />
+            <img src={heroPhone} alt="GradPath app" style={{ width: "100%", maxWidth: 800, height: "auto", display: "block" }} />
             {/* Fade left edge into black */}
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 25%)", pointerEvents: "none" }} />
             {/* Fade top edge */}
@@ -52,15 +51,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BRIDGE STATEMENT */}
-      <section style={{ background: "#0A0A0A", padding: "64px 48px" }}>
-        <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(18px, 2.5vw, 28px)", color: "#fff", lineHeight: 1.4 }}>
-            Connecting two perspectives.{" "}
-            <span style={{ color: "#5AE712" }}>One shared destination.</span>
-          </p>
-        </div>
-      </section>
+
 
       {/* TAGLINE */}
       <section style={{ background: "#0A0A0A", padding: "64px 48px", textAlign: "center", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
