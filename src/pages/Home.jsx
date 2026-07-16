@@ -42,7 +42,7 @@ export default function Home() {
         </div>
 
         {/* Phone image — full width, centered, large */}
-        <div style={{ position: "relative", maxWidth: 800, margin: "0 auto" }}>
+        <div style={{ position: "relative", maxWidth: 860, margin: "0 auto", marginLeft: "30%", marginRight: 0 }}>
           <img
             src={heroPhone}
             alt="GradPath app on iPhone"
