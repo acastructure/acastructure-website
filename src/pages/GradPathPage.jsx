@@ -11,7 +11,7 @@ const phones = [
   { src: phoneTranscript, label: "Transcript", desc: "Import your courses and let GradPath automatically map your academic history — every course, every grade, every semester." },
   { src: phoneDegreeMap, label: "Degree Map", desc: "Visualize your full path to graduation. See every requirement, every course, and every milestone — all in one place." },
   { src: phoneSemester, label: "Semester Optimizer", desc: "Track grades, office hours, and your full graduation pathway. Build smarter semesters with confidence." },
-  { src: phoneTransfer, label: "Transfer Planning", desc: "Explore transfer targets for SFSU students. See exactly how your credits apply before you make a move." },
+  { src: phoneTransfer, label: "Transfer Planning", desc: "Explore your transfer targets. See exactly how your credits apply before you make a move." },
   { src: phoneDegreeChange, label: "Degree Change", desc: "Thinking of switching majors? See exactly which courses carry over, what's still needed, and how many semesters it adds." },
 ];
 
@@ -33,7 +33,7 @@ export default function GradPathPage() {
             </h1>
           </div>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", maxWidth: 560, margin: "0 auto 32px" }}>
-            GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your institution's academic bulletin.
+            GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your university's official degree requirements.
           </p>
           {/* App store badges — sit just above the image */}
           <div style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center", position: "relative", zIndex: 2, marginBottom: -24 }}>
@@ -70,7 +70,7 @@ export default function GradPathPage() {
               <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(24px, 3vw, 32px)", color: "#D8D5CC", marginBottom: 12 }}>{p.label}</h3>
               <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.75, color: "rgba(216,213,204,0.5)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>{p.desc}</p>
               <div style={{ display: "flex", justifyContent: "center", position: "relative" }}>
-                <div style={{ position: "relative", width: "100%", maxWidth: 360 }}>
+                <div style={{ position: "relative", width: "100%", maxWidth: p.label === "Degree Map" ? 440 : 360 }}>
                   <img src={p.src} alt={p.label} style={{ width: "100%", height: "auto", borderRadius: 32, display: "block", boxShadow: "0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(216,213,204,0.06)" }} />
                   <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
                   <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
