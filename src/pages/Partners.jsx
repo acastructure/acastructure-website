@@ -29,7 +29,7 @@ export default function Partners() {
             Let's build<br /><span style={{ color: "#3A9A0A" }}>together.</span>
           </h1>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", maxWidth: 560, margin: "0 auto 48px" }}>
-            AcaStructure is looking to collaborate with universities, faculty, advisors, articulation officers, and researchers who believe students deserve a clearer educational experience.
+            AcaStructure is looking to collaborate with universities, faculty, advisors, articulation officers, and researchers who believe students deserve more clarity.
           </p>
         </div>
 
