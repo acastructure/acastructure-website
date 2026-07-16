@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import gradpathStudent from "../assets/gradpath_student.webp";
+import logoGradPath from "../assets/logo_gradpath.svg";
 import phoneTranscript from "../assets/phone_transcript.webp";
 import phoneDegreeMap from "../assets/phone_degree_map.webp";
 import phoneSemester from "../assets/phone_semester.webp";
@@ -30,10 +31,12 @@ export default function GradPathPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)" }} />
         {/* Content */}
         <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center", width: "100%" }}>
-          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#3A9A0A", marginBottom: 24 }}>GradPath</p>
-          <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 20 }}>
-            Every course.<br /><span style={{ color: "#3A9A0A" }}>One clear path.</span>
-          </h1>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "clamp(12px, 2vw, 24px)", marginBottom: 20 }}>
+            <img src={logoGradPath} alt="GradPath" style={{ height: "clamp(60px, 8vw, 96px)", width: "auto", flexShrink: 0 }} />
+            <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", margin: 0, textAlign: "left" }}>
+              Every course.<br /><span style={{ color: "#3A9A0A" }}>One clear path.</span>
+            </h1>
+          </div>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", marginBottom: 40, maxWidth: 560, margin: "0 auto 40px" }}>
             GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your institution's academic bulletin.
           </p>
