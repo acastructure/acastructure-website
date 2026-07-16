@@ -37,22 +37,13 @@ export default function GradPathPage() {
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", marginBottom: 40, maxWidth: 480, margin: "0 auto 40px" }}>
             Everything you need to plan, track, and graduate with confidence.
           </p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center", justifyContent: "center", marginBottom: 32 }}>
-            <Link to="/get-gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 600, color: "#000", background: "#3A9A0A", padding: "14px 32px", borderRadius: 8, textDecoration: "none" }}>
-              Get GradPath
-            </Link>
-            <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 500, color: "#D8D5CC", border: "1px solid rgba(216,213,204,0.3)", padding: "13px 32px", borderRadius: 8, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}>
-              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              See how it works
-            </Link>
-          </div>
           {/* App store badges */}
           <div style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center" }}>
             <a href="#" style={{ display: "inline-block", textDecoration: "none" }}>
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 44, width: "auto", display: "block" }} />
             </a>
-            <a href="#" style={{ display: "inline-block", textDecoration: "none", marginTop: -6, marginBottom: -6 }}>
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 56, width: "auto", display: "block" }} />
+            <a href="#" style={{ display: "inline-block", textDecoration: "none" }}>
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 44, width: "auto", display: "block" }} />
             </a>
           </div>
         </div>
