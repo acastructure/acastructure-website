@@ -15,17 +15,17 @@ export default function Home() {
 
           {/* LEFT */}
           <div>
-            <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#5AE712", marginBottom: 32 }}>
+            <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#4CC40F", marginBottom: 32 }}>
               Academic Infrastructure
             </p>
             <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(32px, 4vw, 58px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 24 }}>
-              Degree clarity now<br />in the palm of<br /><span style={{ color: "#5AE712" }}>students' hands.</span>
+              Degree clarity now<br />in the palm of<br /><span style={{ color: "#4CC40F" }}>students' hands.</span>
             </h1>
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.6)", maxWidth: 460, marginBottom: 40 }}>
               Universities build extraordinary degree pathways. We simply put them in students' hands.
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
-              <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 600, color: "#0A0A0A", background: "#5AE712", padding: "14px 28px", borderRadius: 8, textDecoration: "none", display: "inline-block" }}>
+              <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 600, color: "#0A0A0A", background: "#4CC40F", padding: "14px 28px", borderRadius: 8, textDecoration: "none", display: "inline-block" }}>
                 Get GradPath
               </Link>
               <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 500, color: "#D8D5CC", background: "transparent", border: "1px solid rgba(216,213,204,0.25)", padding: "13px 28px", borderRadius: 8, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}>
@@ -61,7 +61,7 @@ export default function Home() {
         <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginTop: 16 }}>
           Built by students at SFSU — for students across academia
         </p>
-        <Link to="/about" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#5AE712", textDecoration: "none", display: "inline-block", marginTop: 24 }}>
+        <Link to="/about" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#4CC40F", textDecoration: "none", display: "inline-block", marginTop: 24 }}>
           Our story →
         </Link>
       </section>

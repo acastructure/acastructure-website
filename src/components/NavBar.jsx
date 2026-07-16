@@ -19,7 +19,7 @@ export default function NavBar() {
         {/* Logo */}
         <Link to="/" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", flexShrink: 0 }}>
           <img src={acaLogo} alt="AcaStructure" style={{ height: 36, width: "auto" }} />
-          <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 18, color: "#fff", letterSpacing: "-0.01em" }}>AcaStructure</span>
+          <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 18, color: "#D8D5CC", letterSpacing: "-0.01em" }}>AcaStructure</span>
         </Link>
 
         {/* Desktop links */}
@@ -27,7 +27,7 @@ export default function NavBar() {
           {NAV_LINKS.map(l => {
             const active = location.pathname === l.to;
             return (
-              <Link key={l.to} to={l.to} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, textDecoration: "none", color: active ? "#fff" : "rgba(255,255,255,0.55)", borderBottom: active ? "2px solid #5AE712" : "2px solid transparent", paddingBottom: 2, transition: "color 0.15s" }}>
+              <Link key={l.to} to={l.to} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, textDecoration: "none", color: active ? "#fff" : "rgba(255,255,255,0.55)", borderBottom: active ? "2px solid #4CC40F" : "2px solid transparent", paddingBottom: 2, transition: "color 0.15s" }}>
                 {l.label}
               </Link>
             );
@@ -36,15 +36,15 @@ export default function NavBar() {
 
         {/* Right side */}
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#5AE712", padding: "9px 20px", borderRadius: 8, textDecoration: "none", display: "none" }} className="hidden md:inline-block">
+          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#4CC40F", padding: "9px 20px", borderRadius: 8, textDecoration: "none", display: "none" }} className="hidden md:inline-block">
             Get GradPath
           </Link>
           {/* Show on desktop */}
-          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#5AE712", padding: "9px 20px", borderRadius: 8, textDecoration: "none" }}>
+          <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#4CC40F", padding: "9px 20px", borderRadius: 8, textDecoration: "none" }}>
             Get GradPath
           </Link>
           {/* Hamburger - only on mobile via CSS */}
-          <button onClick={() => setOpen(!open)} style={{ background: "none", border: "none", cursor: "pointer", color: "#fff", padding: 4, display: "none" }} id="nav-hamburger" aria-label="Menu">
+          <button onClick={() => setOpen(!open)} style={{ background: "none", border: "none", cursor: "pointer", color: "#D8D5CC", padding: 4, display: "none" }} id="nav-hamburger" aria-label="Menu">
             <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
               {open ? <path d="M6 18L18 6M6 6l12 12"/> : <path d="M3 6h18M3 12h18M3 18h18"/>}
             </svg>
@@ -56,11 +56,11 @@ export default function NavBar() {
       {open && (
         <div style={{ background: "#0D0D0D", borderTop: "1px solid rgba(255,255,255,0.08)", padding: "16px 48px 24px" }}>
           {NAV_LINKS.map(l => (
-            <Link key={l.to} to={l.to} onClick={() => setOpen(false)} style={{ display: "block", fontFamily: "Inter, sans-serif", fontSize: 16, color: "rgba(255,255,255,0.8)", textDecoration: "none", padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+            <Link key={l.to} to={l.to} onClick={() => setOpen(false)} style={{ display: "block", fontFamily: "Inter, sans-serif", fontSize: 16, color: "rgba(216,213,204,0.8)", textDecoration: "none", padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
               {l.label}
             </Link>
           ))}
-          <Link to="/gradpath" onClick={() => setOpen(false)} style={{ display: "block", fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#000", background: "#5AE712", padding: "12px 20px", borderRadius: 8, textDecoration: "none", textAlign: "center", marginTop: 16 }}>
+          <Link to="/gradpath" onClick={() => setOpen(false)} style={{ display: "block", fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, color: "#000", background: "#4CC40F", padding: "12px 20px", borderRadius: 8, textDecoration: "none", textAlign: "center", marginTop: 16 }}>
             Get GradPath
           </Link>
         </div>
