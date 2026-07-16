@@ -21,14 +21,14 @@ export default function GradPathPage() {
 
       {/* HERO — full bleed student photo with text overlay */}
       <section style={{ position: "relative", height: "90vh", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
-        <img src={gradpathStudent} alt="Student using GradPath" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }} />
+        <img src={gradpathStudent} alt="Student using GradPath" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "70% 50%" }} />
         {/* Dark overlay */}
-        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.55)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)" }} />
         {/* Vignettes all edges */}
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 40%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 25%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 20%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 45%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 20%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 35%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 35%)" }} />
         {/* Content */}
         <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 48px 80px", textAlign: "center", width: "100%" }}>
           <div style={{ marginBottom: 20 }}>
