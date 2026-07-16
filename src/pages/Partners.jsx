@@ -1,6 +1,5 @@
 import { useState } from "react";
 import partnersHero from "../assets/partners_hero.webp";
-import partnersMeeting from "../assets/partners_meeting.webp";
 
 export default function Partners() {
   const [form, setForm] = useState({ name: "", institution: "", role: "", email: "", message: "" });
@@ -20,101 +19,103 @@ export default function Partners() {
   };
 
   return (
-    <div className="font-body overflow-x-hidden">
+    <div style={{ background: "#000", overflowX: "hidden" }}>
 
-      {/* HERO */}
-      <section className="py-16 px-6" style={{ background: "#FAFAF7" }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-widest mb-2" style={{ color: "#B8860B", letterSpacing: "0.2em" }}>Academic Partnerships</p>
-            <div style={{ width: 40, height: 2, background: "#B8860B", marginBottom: 24 }} />
-            <h1 className="font-display font-bold leading-tight mb-6" style={{ fontSize: "clamp(28px, 4vw, 50px)", color: "#1A1A2E" }}>
-              Let's build modern academic infrastructure together.
-            </h1>
-            <p className="font-body leading-relaxed" style={{ fontSize: "clamp(14px, 1.4vw, 16px)", color: "#4A5568" }}>
-              AcaStructure is looking to collaborate with universities, faculty, advisors, articulation officers, and researchers who believe students deserve a clearer educational experience.
-            </p>
-          </div>
-          <div>
-            <img src={partnersHero} alt="Students walking toward university" className="w-full h-auto rounded-2xl" />
-          </div>
+      {/* HERO — text on top, image below */}
+      <section style={{ background: "#000", paddingTop: 80 }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center" }}>
+          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#3A9A0A", marginBottom: 24 }}>Academic Partnerships</p>
+          <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 20 }}>
+            Let's build<br /><span style={{ color: "#3A9A0A" }}>together.</span>
+          </h1>
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", maxWidth: 560, margin: "0 auto 48px" }}>
+            AcaStructure is looking to collaborate with universities, faculty, advisors, articulation officers, and researchers who believe students deserve a clearer educational experience.
+          </p>
         </div>
-      </section>
 
-      {/* BRIDGE STATEMENT */}
-      <section className="py-14 px-6 text-center" style={{ borderTop: "1px solid #E8E4D9", borderBottom: "1px solid #E8E4D9" }}>
-        <div className="max-w-2xl mx-auto">
-          <p className="font-body leading-relaxed mb-3" style={{ fontSize: "clamp(15px, 1.8vw, 18px)", color: "#4A5568" }}>
-            For decades, educators have worked to improve articulation, advising, curriculum planning, and student success.
-          </p>
-          <p className="font-display font-semibold leading-snug" style={{ fontSize: "clamp(18px, 2.2vw, 24px)", color: "#1E5FA8" }}>
-            We're simply building a modern way for students to experience education with clarity.
-          </p>
+        {/* Hero image */}
+        <div style={{ position: "relative", width: "100%", height: "60vh", overflow: "hidden" }}>
+          <img src={partnersHero} alt="Partners" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 40%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 25%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 20%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)" }} />
         </div>
       </section>
 
       {/* AUDIENCE CARDS */}
-      <section className="py-16 px-6" style={{ background: "#FAFAF7" }}>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section style={{ background: "#000", padding: "80px 48px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
           {[
-            { icon: <svg width="40" height="40" fill="none" stroke="#1B3A0E" strokeWidth="1.5" viewBox="0 0 48 48"><rect x="6" y="22" width="36" height="22" rx="1"/><path d="M2 22l22-16 22 16"/><line x1="18" y1="44" x2="18" y2="30"/><line x1="30" y1="44" x2="30" y2="30"/><line x1="18" y1="30" x2="30" y2="30"/></svg>, title: "Universities & CCs", desc: "Explore how GradPath can complement your existing student experience." },
-            { icon: <svg width="40" height="40" fill="none" stroke="#1E5FA8" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="16" cy="16" r="7"/><circle cx="32" cy="16" r="7"/><path d="M4 44c0-8 5-13 12-13h16c7 0 12 5 12 13"/></svg>, title: "Faculty & Advisors", desc: "Help us refine the tools students rely on every semester." },
-            { icon: <svg width="40" height="40" fill="none" stroke="#B8860B" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="24" cy="20" r="11"/><line x1="32" y1="29" x2="42" y2="40"/><circle cx="42" cy="40" r="4"/></svg>, title: "Researchers", desc: "Share ideas that help build better academic infrastructure." },
+            {
+              icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><rect x="6" y="22" width="36" height="22" rx="1"/><path d="M2 22l22-16 22 16"/><line x1="18" y1="44" x2="18" y2="30"/><line x1="30" y1="44" x2="30" y2="30"/><line x1="18" y1="30" x2="30" y2="30"/></svg>,
+              title: "Universities & CCs",
+              desc: "Explore how GradPath can complement your existing student experience."
+            },
+            {
+              icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="16" cy="16" r="7"/><circle cx="32" cy="16" r="7"/><path d="M4 44c0-8 5-13 12-13h16c7 0 12 5 12 13"/></svg>,
+              title: "Faculty & Advisors",
+              desc: "Help us refine the tools students rely on every semester."
+            },
+            {
+              icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="24" cy="20" r="11"/><line x1="32" y1="29" x2="42" y2="40"/><circle cx="42" cy="40" r="4"/></svg>,
+              title: "Researchers",
+              desc: "Share ideas that help build better academic infrastructure."
+            },
           ].map(a => (
-            <div key={a.title} className="bg-white rounded-2xl p-8 text-center" style={{ border: "1px solid #E8E4D9" }}>
-              <div className="flex justify-center mb-5">{a.icon}</div>
-              <h3 className="font-display font-semibold mb-3" style={{ fontSize: "clamp(17px, 2vw, 20px)", color: "#1A1A2E" }}>{a.title}</h3>
-              <p className="font-body text-sm leading-relaxed" style={{ color: "#4A5568" }}>{a.desc}</p>
+            <div key={a.title} style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "32px 28px", border: "1px solid rgba(216,213,204,0.07)", textAlign: "center" }}>
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: 20 }}>{a.icon}</div>
+              <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(17px, 2vw, 20px)", color: "#D8D5CC", marginBottom: 10 }}>{a.title}</h3>
+              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(216,213,204,0.5)" }}>{a.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* CONTACT FORM */}
-      <section className="py-16 px-6" style={{ background: "#F0EDE4" }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <div>
-            <h2 className="font-display font-bold leading-tight mb-5" style={{ fontSize: "clamp(26px, 3.5vw, 42px)", color: "#1A1A2E" }}>
-              Have an idea?<br />We'd love to hear it.
-            </h2>
-            <p className="font-body leading-relaxed mb-8" style={{ fontSize: "clamp(14px, 1.4vw, 15px)", color: "#4A5568" }}>
-              Whether you're exploring collaboration, sharing research, improving advising workflows, or simply curious about what we're building — we'd be happy to start a conversation.
-            </p>
-            <img src={partnersMeeting} alt="Team meeting" className="w-full rounded-xl" />
-          </div>
+      <section style={{ background: "#0A0A0A", padding: "80px 48px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
+        <div style={{ maxWidth: 700, margin: "0 auto" }}>
+          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 12 }}>Get In Touch</p>
+          <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 42px)", color: "#D8D5CC", textAlign: "center", lineHeight: 1.1, marginBottom: 12 }}>
+            Reach out to us.
+          </h2>
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.75, color: "rgba(216,213,204,0.5)", textAlign: "center", marginBottom: 48 }}>
+            Whether you're exploring collaboration, sharing research, improving advising workflows, or simply curious about what we're building — we'd be happy to start a conversation.
+          </p>
 
-          <div className="bg-white rounded-2xl p-8" style={{ border: "1px solid #E8E4D9" }}>
+          <div style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "36px", border: "1px solid rgba(216,213,204,0.07)" }}>
             {status === "sent" ? (
-              <div className="text-center py-10">
-                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ background: "rgba(27,58,14,0.1)" }}>
-                  <svg width="24" height="24" fill="none" stroke="#1B3A0E" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <div style={{ textAlign: "center", padding: "40px 0" }}>
+                <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(58,154,10,0.15)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+                  <svg width="24" height="24" fill="none" stroke="#3A9A0A" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
                 </div>
-                <h3 className="font-display font-semibold text-xl mb-2" style={{ color: "#1A1A2E" }}>Message sent.</h3>
-                <p className="font-body text-sm" style={{ color: "#4A5568" }}>We'll be in touch soon.</p>
+                <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 20, color: "#D8D5CC", marginBottom: 8 }}>Message sent.</h3>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, color: "rgba(216,213,204,0.5)" }}>We'll be in touch soon.</p>
               </div>
             ) : (
-              <div className="flex flex-col gap-3">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <input name="name" value={form.name} onChange={handleChange} placeholder="Full Name" className="font-body text-sm px-4 py-3 rounded-lg w-full outline-none" style={{ border: "1px solid #E8E4D9", background: "#FAFAF7", color: "#1A1A2E" }} />
-                  <input name="institution" value={form.institution} onChange={handleChange} placeholder="Institution (optional)" className="font-body text-sm px-4 py-3 rounded-lg w-full outline-none" style={{ border: "1px solid #E8E4D9", background: "#FAFAF7", color: "#1A1A2E" }} />
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                  <input name="name" value={form.name} onChange={handleChange} placeholder="Full Name" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none" }} />
+                  <input name="institution" value={form.institution} onChange={handleChange} placeholder="Institution (optional)" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none" }} />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div className="relative">
-                    <select name="role" value={form.role} onChange={handleChange} className="w-full font-body text-sm px-4 py-3 rounded-lg outline-none appearance-none" style={{ border: "1px solid #E8E4D9", background: "#FAFAF7", color: form.role ? "#1A1A2E" : "#718096" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                  <div style={{ position: "relative" }}>
+                    <select name="role" value={form.role} onChange={handleChange} style={{ width: "100%", fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: form.role ? "#D8D5CC" : "rgba(216,213,204,0.35)", outline: "none", appearance: "none" }}>
                       <option value="">Your Role</option>
                       <option>Administrator</option><option>Faculty</option><option>Advisor</option><option>Researcher</option><option>Student</option><option>Other</option>
                     </select>
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#718096" }}>▾</span>
+                    <span style={{ position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", color: "rgba(216,213,204,0.35)", pointerEvents: "none" }}>▾</span>
                   </div>
-                  <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="Email Address" className="font-body text-sm px-4 py-3 rounded-lg w-full outline-none" style={{ border: "1px solid #E8E4D9", background: "#FAFAF7", color: "#1A1A2E" }} />
+                  <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="Email Address" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none" }} />
                 </div>
-                <textarea name="message" value={form.message} onChange={handleChange} rows={4} placeholder="Tell us how you'd like to collaborate or what you're interested in..." className="w-full font-body text-sm px-4 py-3 rounded-lg outline-none resize-none" style={{ border: "1px solid #E8E4D9", background: "#FAFAF7", color: "#1A1A2E" }} />
-                {status === "error" && <p className="font-body text-sm" style={{ color: "#DC2626" }}>Something went wrong. Email admin@acastructure.com directly.</p>}
-                <button onClick={handleSubmit} disabled={status === "sending"} className="w-full font-body text-sm font-semibold py-4 rounded-lg flex items-center justify-center gap-2 border-0 cursor-pointer" style={{ color: "#0A1628", background: "#5AE712" }}>
+                <textarea name="message" value={form.message} onChange={handleChange} rows={5} placeholder="Tell us how you'd like to collaborate or what you're interested in..." style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none", resize: "none" }} />
+                {status === "error" && <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "#DC2626" }}>Something went wrong. Email admin@acastructure.com directly.</p>}
+                <button onClick={handleSubmit} disabled={status === "sending"} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, padding: "14px", borderRadius: 8, border: "none", background: "#3A9A0A", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                   {status === "sending" ? "Sending..." : "Send Message"}
                 </button>
-                <p className="font-body text-xs text-center" style={{ color: "#718096" }}>🔒 We respect your privacy. Your information will never be shared.</p>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.25)", textAlign: "center" }}>🔒 We respect your privacy. Your information will never be shared.</p>
               </div>
             )}
           </div>
