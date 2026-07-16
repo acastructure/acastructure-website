@@ -34,10 +34,6 @@ export default function Home() {
             <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 600, color: "#0A0A0A", background: "#3A9A0A", padding: "14px 32px", borderRadius: 8, textDecoration: "none", display: "inline-block" }}>
               Get GradPath
             </Link>
-            <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 500, color: "#D8D5CC", background: "transparent", border: "1px solid rgba(216,213,204,0.25)", padding: "13px 32px", borderRadius: 8, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}>
-              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              See how it works
-            </Link>
           </div>
         </div>
 
