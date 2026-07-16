@@ -36,16 +36,16 @@ export default function Home() {
           </div>
 
           {/* RIGHT — phone with vignette */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-            <img src={heroPhone} alt="GradPath app" style={{ width: "100%", maxWidth: 800, height: "auto", display: "block" }} />
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-start", position: "relative", marginLeft: -40 }}>
+            <img src={heroPhone} alt="GradPath app" style={{ width: "110%", maxWidth: 820, height: "auto", display: "block" }} />
             {/* Fade left edge into black */}
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 25%)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 20%)", pointerEvents: "none" }} />
             {/* Fade top edge */}
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 20%)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 15%)", pointerEvents: "none" }} />
             {/* Fade bottom edge */}
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 20%)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 15%)", pointerEvents: "none" }} />
             {/* Fade right edge */}
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 15%)", pointerEvents: "none" }} />
           </div>
 
         </div>
