@@ -34,8 +34,8 @@ export default function GradPathPage() {
           <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 20 }}>
             Every course.<br /><span style={{ color: "#3A9A0A" }}>One clear path.</span>
           </h1>
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", marginBottom: 40, maxWidth: 480, margin: "0 auto 40px" }}>
-            Everything you need to plan, track, and graduate with confidence.
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", marginBottom: 40, maxWidth: 560, margin: "0 auto 40px" }}>
+            GradPath organizes your university's degree requirements, transfer pathways, semester planning, and progress into one clear experience — built directly from your institution's academic bulletin.
           </p>
           {/* App store badges */}
           <div style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center" }}>
