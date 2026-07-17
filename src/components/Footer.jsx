@@ -1,24 +1,12 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import acaLogo from "../assets/logo_acastructure.svg";
 
 export default function Footer() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  useEffect(() => {
-    const handle = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handle);
-    return () => window.removeEventListener("resize", handle);
-  }, []);
-
   return (
     <footer style={{ background: "#000", color: "#D8D5CC" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: isMobile ? "48px 24px" : "56px 48px" }}>
-
-        {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "1.5fr 1fr 1fr 1fr 1fr", gap: isMobile ? 32 : 40, paddingBottom: 40, borderBottom: "1px solid rgba(232,228,217,0.1)" }}>
-
-          {/* Brand — full width on mobile */}
-          <div style={{ gridColumn: isMobile ? "1 / -1" : "auto" }}>
+      <div className="footer-inner" style={{ maxWidth: 1280, margin: "0 auto", padding: "56px 48px" }}>
+        <div className="footer-grid">
+          <div className="footer-brand">
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
               <img src={acaLogo} alt="AcaStructure" style={{ height: 30, width: "auto" }} />
               <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 16, color: "#D8D5CC" }}>AcaStructure</span>
@@ -28,7 +16,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Company */}
           <div>
             <h4 style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(216,213,204,0.28)", marginBottom: 16 }}>Company</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -36,7 +23,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Products */}
           <div>
             <h4 style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(216,213,204,0.28)", marginBottom: 16 }}>Products</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -44,7 +30,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Legal */}
           <div>
             <h4 style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(216,213,204,0.28)", marginBottom: 16 }}>Legal</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -54,7 +39,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Connect */}
           <div>
             <h4 style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(216,213,204,0.28)", marginBottom: 16 }}>Connect</h4>
             <div style={{ display: "flex", gap: 16, marginBottom: 14 }}>
@@ -75,7 +59,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div style={{ paddingTop: 20 }}>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.28)" }}>© 2026 AcaStructure. All rights reserved.</p>
         </div>

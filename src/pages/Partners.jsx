@@ -1,20 +1,7 @@
-import { useState, useEffect } from "react";
-
-function useMobile() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  useEffect(() => {
-    const h = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", h);
-    return () => window.removeEventListener("resize", h);
-  }, []);
-  return isMobile;
-}
-
 import { useState } from "react";
 import partnersHero from "../assets/partners_hero.webp";
 
 export default function Partners() {
-  const isMobile = useMobile();
   const [form, setForm] = useState({ name: "", institution: "", role: "", email: "", message: "" });
   const [status, setStatus] = useState("idle");
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
@@ -35,8 +22,8 @@ export default function Partners() {
     <div style={{ background: "#000", overflowX: "hidden" }}>
 
       {/* HERO — text on top, image below */}
-      <section style={{ background: "#000", paddingTop: isMobile ? 60 : 80 }}>
-        <div style={{ maxWidth: 800, margin: "0 auto", padding: isMobile ? "0 24px" : "0 48px", textAlign: "center" }}>
+      <section className="section-pad-top" style={{ background: "#000" }}>
+        <div className="hero-pad" style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D8D5CC", marginBottom: 24 }}>Academic Partnerships</p>
           <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 20 }}>
             Let's build<br /><span style={{ color: "#3A9A0A" }}>together.</span>
@@ -58,8 +45,8 @@ export default function Partners() {
       </section>
 
       {/* AUDIENCE CARDS */}
-      <section style={{ background: "#000", padding: isMobile ? "60px 24px" : "80px 48px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
+      <section className="section-pad" style={{ background: "#000", paddingTop: 80, paddingBottom: 80 }}>
+        <div className="audience-grid" style={{ maxWidth: 900, margin: "0 auto" }}>
           {[
             {
               icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><rect x="6" y="22" width="36" height="22" rx="1"/><path d="M2 22l22-16 22 16"/><line x1="18" y1="44" x2="18" y2="30"/><line x1="30" y1="44" x2="30" y2="30"/><line x1="18" y1="30" x2="30" y2="30"/></svg>,
@@ -87,7 +74,7 @@ export default function Partners() {
       </section>
 
       {/* CONTACT FORM */}
-      <section style={{ background: "#0A0A0A", padding: isMobile ? "60px 24px" : "80px 48px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
+      <section className="section-pad" style={{ background: "#0A0A0A", paddingTop: 80, paddingBottom: 80, borderTop: "1px solid rgba(216,213,204,0.06)" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 12 }}>Get In Touch</p>
           <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 42px)", color: "#D8D5CC", textAlign: "center", lineHeight: 1.1, marginBottom: 12 }}>
@@ -108,11 +95,11 @@ export default function Partners() {
               </div>
             ) : (
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
+                <div className="partners-form-grid">
                   <input name="name" value={form.name} onChange={handleChange} placeholder="Full Name" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none" }} />
                   <input name="institution" value={form.institution} onChange={handleChange} placeholder="Institution (optional)" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none" }} />
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
+                <div className="partners-form-grid">
                   <div style={{ position: "relative" }}>
                     <select name="role" value={form.role} onChange={handleChange} style={{ width: "100%", fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: form.role ? "#D8D5CC" : "rgba(216,213,204,0.35)", outline: "none", appearance: "none" }}>
                       <option value="">Your Role</option>
