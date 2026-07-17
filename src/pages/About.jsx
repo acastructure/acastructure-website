@@ -42,8 +42,8 @@ export default function About() {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 64 }}>
             {[
-              { name: "Rick", img: rickHeadshot, roles: ["Philosophy student · Veteran, USAF"], focus: "Academic models, research, and product vision." },
               { name: "Isabella", img: isabellaHeadshot, roles: ["Physics student · Veteran, USAF"], focus: "Building reliable systems that people can trust." },
+              { name: "Rick", img: rickHeadshot, roles: ["Philosophy student · Veteran, USAF"], focus: "Academic models, research, and product vision." },
             ].map(p => (
               <div key={p.name} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
                 <img src={p.img} alt={p.name} style={{ width: 140, height: 140, borderRadius: 16, objectFit: "cover", objectPosition: "top", marginBottom: 20, border: "1px solid rgba(216,213,204,0.1)" }} />
