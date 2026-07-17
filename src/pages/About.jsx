@@ -1,13 +1,26 @@
+import { useState, useEffect } from "react";
+
+function useMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const h = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", h);
+    return () => window.removeEventListener("resize", h);
+  }, []);
+  return isMobile;
+}
+
 import rickHeadshot from "../assets/rick_headshot.webp";
 import isabellaHeadshot from "../assets/isabella_headshot.webp";
 
 export default function About() {
+  const isMobile = useMobile();
   return (
     <div style={{ background: "#000", overflowX: "hidden" }}>
 
       {/* HERO */}
-      <section style={{ background: "#000", paddingTop: 80, paddingBottom: 80 }}>
-        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center" }}>
+      <section style={{ background: "#000", paddingTop: isMobile ? 60 : 80, paddingBottom: isMobile ? 60 : 80 }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", padding: isMobile ? "0 24px" : "0 48px", textAlign: "center" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D8D5CC", marginBottom: 24 }}>About Us</p>
           <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 0 }}>
             Our journey.<br /><span style={{ color: "#3A9A0A" }}>Your path.</span>
@@ -16,7 +29,7 @@ export default function About() {
       </section>
 
       {/* STORY */}
-      <section style={{ background: "#000", padding: "0 48px 80px" }}>
+      <section style={{ background: "#000", padding: isMobile ? "0 24px 60px" : "0 48px 80px" }}>
         <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 17px)", lineHeight: 1.9, color: "rgba(216,213,204,0.65)", marginBottom: 28 }}>
             Isabella grew up in Havelock, North Carolina, and Rick was raised in Monterey, California. They met during high school after Isabella relocated to Monterey with her family. Together, they later enlisted in the United States Air Force.
@@ -34,13 +47,13 @@ export default function About() {
       </section>
 
       {/* TEAM */}
-      <section style={{ background: "#0A0A0A", padding: "80px 48px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
+      <section style={{ background: "#0A0A0A", padding: isMobile ? "60px 24px" : "80px 48px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 12 }}>The Team</p>
           <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(24px, 3vw, 38px)", color: "#D8D5CC", textAlign: "center", marginBottom: 64 }}>
             Built by people living the problem.
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 64 }}>
+          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", gap: 64 }}>
             {[
               { name: "Isabella", img: isabellaHeadshot, roles: ["Physics student · Veteran, USAF"], focus: "Building reliable systems that people can trust." },
               { name: "Rick", img: rickHeadshot, roles: ["Philosophy student · Veteran, USAF"], focus: "Academic models, research, and product vision." },

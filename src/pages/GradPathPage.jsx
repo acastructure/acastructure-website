@@ -1,3 +1,15 @@
+import { useState, useEffect } from "react";
+
+function useMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const h = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", h);
+    return () => window.removeEventListener("resize", h);
+  }, []);
+  return isMobile;
+}
+
 import { Link } from "react-router-dom";
 import gradpathStudent from "../assets/gradpath_student.webp";
 import logoGradPath from "../assets/logo_gradpath.svg";
@@ -16,13 +28,14 @@ const phones = [
 ];
 
 export default function GradPathPage() {
+  const isMobile = useMobile();
   return (
     <div style={{ background: "#000", overflowX: "hidden" }}>
 
       {/* HERO — text block on top, image below with buttons overlapping */}
       <section style={{ background: "#000", paddingTop: 80 }}>
         {/* Text content */}
-        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 48px", textAlign: "center" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", padding: isMobile ? "0 24px" : "0 48px", textAlign: "center" }}>
           {/* Logo above headline */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 20 }}>
             <img src={logoGradPath} alt="GradPath" style={{ height: "clamp(40px, 5vw, 64px)", width: "auto" }} />
@@ -58,7 +71,7 @@ export default function GradPathPage() {
       </section>
 
       {/* PHONE SCREENSHOTS — vertical scroll */}
-      <section style={{ background: "#000", padding: "80px 48px" }}>
+      <section style={{ background: "#000", padding: isMobile ? "60px 24px" : "80px 48px" }}>
         <div style={{ maxWidth: 600, margin: "0 auto" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 80 }}>Core Features</p>
 
@@ -81,7 +94,7 @@ export default function GradPathPage() {
       </section>
 
       {/* PRICING */}
-      <section style={{ background: "#0A0A0A", padding: "80px 48px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
+      <section style={{ background: "#0A0A0A", padding: isMobile ? "60px 24px" : "80px 48px", borderTop: "1px solid rgba(216,213,204,0.06)" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 12 }}>Transparent pricing</p>
           <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 42px)", color: "#D8D5CC", textAlign: "center", lineHeight: 1.1, marginBottom: 8 }}>

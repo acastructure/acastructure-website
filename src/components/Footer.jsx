@@ -1,20 +1,24 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import acaLogo from "../assets/logo_acastructure.svg";
 
-const cream = "#E8E4D9";
-const creamDim = "rgba(232,228,217,0.5)";
-const creamFaint = "rgba(232,228,217,0.28)";
-
 export default function Footer() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const handle = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handle);
+    return () => window.removeEventListener("resize", handle);
+  }, []);
+
   return (
     <footer style={{ background: "#000", color: "#D8D5CC" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "56px 48px" }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: isMobile ? "48px 24px" : "56px 48px" }}>
 
         {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr", gap: 40, paddingBottom: 40, borderBottom: `1px solid rgba(232,228,217,0.1)` }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "1.5fr 1fr 1fr 1fr 1fr", gap: isMobile ? 32 : 40, paddingBottom: 40, borderBottom: "1px solid rgba(232,228,217,0.1)" }}>
 
-          {/* Brand */}
-          <div>
+          {/* Brand — full width on mobile */}
+          <div style={{ gridColumn: isMobile ? "1 / -1" : "auto" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
               <img src={acaLogo} alt="AcaStructure" style={{ height: 30, width: "auto" }} />
               <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 16, color: "#D8D5CC" }}>AcaStructure</span>
@@ -46,7 +50,7 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               <Link to="/privacy-policy" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Privacy Policy</Link>
               <Link to="/terms-of-service" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Terms of Service</Link>
-              <Link to="/beta-program-agreement" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Beta Program Agreement</Link>
+              <Link to="/beta-program-agreement" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.55)", textDecoration: "none" }}>Beta Agreement</Link>
             </div>
           </div>
 
@@ -72,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{ paddingTop: 20, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
+        <div style={{ paddingTop: 20 }}>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.28)" }}>© 2026 AcaStructure. All rights reserved.</p>
         </div>
       </div>
