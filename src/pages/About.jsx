@@ -40,23 +40,20 @@ export default function About() {
           <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(24px, 3vw, 38px)", color: "#D8D5CC", textAlign: "center", marginBottom: 64 }}>
             Built by people living the problem.
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 48 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 64 }}>
             {[
-              { name: "Rick", img: rickHeadshot, roles: ["Philosophy student.", "Veteran, USAF.", "Systems thinker."], focus: "Focused on academic models, research, and product vision." },
-              { name: "Isabella", img: isabellaHeadshot, roles: ["Physics student.", "Veteran, USAF.", "Architect of the platform."], focus: "Focused on building reliable systems that people can trust." },
+              { name: "Rick", img: rickHeadshot, roles: ["Philosophy student · Veteran, USAF"], focus: "Academic models, research, and product vision." },
+              { name: "Isabella", img: isabellaHeadshot, roles: ["Physics student · Veteran, USAF"], focus: "Building reliable systems that people can trust." },
             ].map(p => (
-              <div key={p.name} style={{ display: "flex", gap: 28, alignItems: "flex-start" }}>
-                <img src={p.img} alt={p.name} style={{ width: 100, height: 100, borderRadius: 12, objectFit: "cover", objectPosition: "top", flexShrink: 0, border: "1px solid rgba(216,213,204,0.1)" }} />
-                <div>
-                  <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(20px, 2.5vw, 26px)", color: "#D8D5CC", marginBottom: 8 }}>{p.name}</h3>
-                  <div style={{ width: 32, height: 1, background: "#3A9A0A", marginBottom: 12 }} />
-                  <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: 12 }}>
-                    {p.roles.map(r => <p key={r} style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.5)" }}>{r}</p>)}
-                  </div>
-                  <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 500, lineHeight: 1.65, color: "rgba(216,213,204,0.8)" }}>{p.focus}</p>
-                </div>
+              <div key={p.name} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+                <img src={p.img} alt={p.name} style={{ width: 140, height: 140, borderRadius: 16, objectFit: "cover", objectPosition: "top", marginBottom: 20, border: "1px solid rgba(216,213,204,0.1)" }} />
+                <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(20px, 2.5vw, 26px)", color: "#D8D5CC", marginBottom: 8 }}>{p.name}</h3>
+                <div style={{ width: 32, height: 1, background: "#3A9A0A", marginBottom: 12 }} />
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "rgba(216,213,204,0.45)", marginBottom: 10 }}>{p.roles[0]}</p>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 500, lineHeight: 1.65, color: "rgba(216,213,204,0.7)", maxWidth: 240 }}>{p.focus}</p>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </section>
