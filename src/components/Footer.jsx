@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
-              <img src={acaLogo} alt="AcaStructure" style={{ height: 28, width: "auto" }} />
+              <img src={acaLogo} alt="AcaStructure" style={{ height: 20, width: "auto" }} />
             </div>
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(232,228,217,0.5)", maxWidth: 240 }}>
               Building clarity where it's needed most.

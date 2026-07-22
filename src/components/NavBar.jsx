@@ -18,7 +18,7 @@ export default function NavBar() {
 
         {/* Logo */}
         <Link to="/" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none", flexShrink: 0 }}>
-          <img src={acaLogo} alt="AcaStructure" style={{ height: 28, width: "auto" }} />
+          <img src={acaLogo} alt="AcaStructure" style={{ height: 20, width: "auto" }} />
         </Link>
 
         {/* Desktop links */}
