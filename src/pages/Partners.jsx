@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import FadeUp from "../components/FadeUp";
 import partnersHero from "../assets/partners_hero.webp";
 
 export default function Partners() {
@@ -48,27 +50,20 @@ export default function Partners() {
       <section className="section-pad" style={{ background: "#000", paddingTop: 80, paddingBottom: 80 }}>
         <div className="audience-grid" style={{ maxWidth: 900, margin: "0 auto" }}>
           {[
-            {
-              icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><rect x="6" y="22" width="36" height="22" rx="1"/><path d="M2 22l22-16 22 16"/><line x1="18" y1="44" x2="18" y2="30"/><line x1="30" y1="44" x2="30" y2="30"/><line x1="18" y1="30" x2="30" y2="30"/></svg>,
-              title: "Universities & CCs",
-              desc: "Explore how GradPath can complement your existing student experience."
-            },
-            {
-              icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="16" cy="16" r="7"/><circle cx="32" cy="16" r="7"/><path d="M4 44c0-8 5-13 12-13h16c7 0 12 5 12 13"/></svg>,
-              title: "Faculty & Advisors",
-              desc: "Help us refine the tools students rely on every semester."
-            },
-            {
-              icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="24" cy="20" r="11"/><line x1="32" y1="29" x2="42" y2="40"/><circle cx="42" cy="40" r="4"/></svg>,
-              title: "Researchers",
-              desc: "Share ideas that help build better academic infrastructure."
-            },
-          ].map(a => (
-            <div key={a.title} style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "32px 28px", border: "1px solid rgba(216,213,204,0.07)", textAlign: "center" }}>
-              <div style={{ display: "flex", justifyContent: "center", marginBottom: 20 }}>{a.icon}</div>
-              <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(17px, 2vw, 20px)", color: "#D8D5CC", marginBottom: 10 }}>{a.title}</h3>
-              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(216,213,204,0.5)" }}>{a.desc}</p>
-            </div>
+            { icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><rect x="6" y="22" width="36" height="22" rx="1"/><path d="M2 22l22-16 22 16"/><line x1="18" y1="44" x2="18" y2="30"/><line x1="30" y1="44" x2="30" y2="30"/><line x1="18" y1="30" x2="30" y2="30"/></svg>, title: "Universities & CCs", desc: "Explore how GradPath can complement your existing student experience." },
+            { icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="16" cy="16" r="7"/><circle cx="32" cy="16" r="7"/><path d="M4 44c0-8 5-13 12-13h16c7 0 12 5 12 13"/></svg>, title: "Faculty & Advisors", desc: "Help us refine the tools students rely on every semester." },
+            { icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="24" cy="20" r="11"/><line x1="32" y1="29" x2="42" y2="40"/><circle cx="42" cy="40" r="4"/></svg>, title: "Researchers", desc: "Share ideas that help build better academic infrastructure." },
+          ].map((a, i) => (
+            <FadeUp key={a.title} delay={i * 0.1}>
+              <motion.div
+                whileHover={{ y: -4, borderColor: "rgba(58,154,10,0.3)" }}
+                transition={{ duration: 0.25 }}
+                style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "32px 28px", border: "1px solid rgba(216,213,204,0.07)", textAlign: "center", height: "100%" }}>
+                <div style={{ display: "flex", justifyContent: "center", marginBottom: 20 }}>{a.icon}</div>
+                <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(17px, 2vw, 20px)", color: "#D8D5CC", marginBottom: 10 }}>{a.title}</h3>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(216,213,204,0.5)" }}>{a.desc}</p>
+              </motion.div>
+            </FadeUp>
           ))}
         </div>
       </section>

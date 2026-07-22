@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import FadeUp from "../components/FadeUp";
 import gradpathStudent from "../assets/gradpath_student.webp";
 import logoGradPath from "../assets/logo_gradpath.svg";
 import phoneTranscript from "../assets/phone_transcript.webp";
@@ -63,19 +65,22 @@ export default function GradPathPage() {
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 80 }}>Core Features</p>
 
           {phones.map((p, i) => (
-            <div key={p.label} style={{ marginBottom: i < phones.length - 1 ? 96 : 0, textAlign: "center" }}>
+            <FadeUp key={p.label} delay={0.05} style={{ marginBottom: i < phones.length - 1 ? 96 : 0, textAlign: "center" }}>
               <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(24px, 3vw, 32px)", color: "#D8D5CC", marginBottom: 12 }}>{p.label}</h3>
               <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.75, color: "rgba(216,213,204,0.5)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>{p.desc}</p>
               <div style={{ display: "flex", justifyContent: "center", position: "relative" }}>
-                <div style={{ position: "relative", width: "100%", maxWidth: p.label === "Degree Map" ? 440 : 360 }}>
+                <motion.div
+                  whileHover={{ y: -6, boxShadow: "0 32px 80px rgba(0,0,0,0.8)" }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  style={{ position: "relative", width: "100%", maxWidth: p.label === "Degree Map" ? 440 : 360 }}>
                   <img src={p.src} alt={p.label} style={{ width: "100%", height: "auto", borderRadius: 32, display: "block", boxShadow: "0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(216,213,204,0.06)" }} />
                   <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
                   <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
                   <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
                   <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 18%)" }} />
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </FadeUp>
           ))}
         </div>
       </section>
