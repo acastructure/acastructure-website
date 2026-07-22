@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import acaLogo from "../assets/logo_acastructure.svg";
+import acaLogo from "../assets/logo_acastructure.webp";
 
 export default function Footer() {
   return (
@@ -8,8 +8,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
-              <img src={acaLogo} alt="AcaStructure" style={{ height: 30, width: "auto" }} />
-              <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 16, color: "#D8D5CC" }}>AcaStructure</span>
+              <img src={acaLogo} alt="AcaStructure" style={{ height: 28, width: "auto" }} />
             </div>
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(232,228,217,0.5)", maxWidth: 240 }}>
               Building clarity where it's needed most.

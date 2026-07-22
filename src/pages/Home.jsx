@@ -9,7 +9,7 @@ export default function Home() {
         <div className="hero-pad" style={{ position: "relative", maxWidth: 900, margin: "0 auto" }}>
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D8D5CC", marginBottom: 32 }}>Academic Infrastructure</p>
           <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 6vw, 80px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 28 }}>
-            Degree clarity<br />in the palm of<br /><span style={{ color: "#3A9A0A" }}>students' hands.</span>
+            Helping save time<br />& money in the<br />palm of <span style={{ color: "#3A9A0A" }}>students' hands.</span>
           </h1>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.55)", maxWidth: 520, margin: "0 auto 40px" }}>
             Universities build extraordinary degree pathways. We simply put them in students' hands.

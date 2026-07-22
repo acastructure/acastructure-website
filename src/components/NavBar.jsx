@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import acaLogo from "../assets/logo_acastructure.svg";
+import acaLogo from "../assets/logo_acastructure.webp";
 
 const NAV_LINKS = [
   { label: "GradPath", to: "/gradpath" },
@@ -18,8 +18,7 @@ export default function NavBar() {
 
         {/* Logo */}
         <Link to="/" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none", flexShrink: 0 }}>
-          <img src={acaLogo} alt="AcaStructure" style={{ height: 30, width: "auto" }} />
-          <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 16, color: "#D8D5CC" }}>AcaStructure</span>
+          <img src={acaLogo} alt="AcaStructure" style={{ height: 28, width: "auto" }} />
         </Link>
 
         {/* Desktop links */}
