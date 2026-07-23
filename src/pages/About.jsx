@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import FadeUp from "../components/FadeUp";
 import isabellaHeadshot from "../assets/isabella_headshot.webp";
+import rickHeadshot from "../assets/rick_headshot.webp";
 
 export default function About() {
   return (
