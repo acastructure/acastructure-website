@@ -35,7 +35,9 @@ export default function NavBar() {
 
         {/* Right side */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <Link to="/gradpath" className="nav-cta" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#3A9A0A", padding: "9px 20px", borderRadius: 8, textDecoration: "none" }}>
+          <Link to="/gradpath" className="nav-cta" style={{ fontFamily: "Inter, sans-serif", fontSize: 13, fontWeight: 600, color: "#000", background: "#3A9A0A", padding: "9px 20px", borderRadius: 8, textDecoration: "none", transition: "box-shadow 0.2s, transform 0.2s" }}
+            onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 0 20px rgba(58,154,10,0.55)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+            onMouseLeave={e => { e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}>
             Get GradPath
           </Link>
           <button className="nav-hamburger" onClick={() => setOpen(!open)} style={{ background: "none", border: "none", cursor: "pointer", color: "#D8D5CC", padding: 4 }} aria-label="Menu">

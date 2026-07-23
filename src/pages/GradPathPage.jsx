@@ -65,7 +65,7 @@ export default function GradPathPage() {
           <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 80 }}>Core Features</p>
 
           {phones.map((p, i) => (
-            <FadeUp key={p.label} delay={0.05} style={{ marginBottom: i < phones.length - 1 ? 96 : 0, textAlign: "center" }}>
+            <FadeUp key={p.label} delay={0.05} duration={1.0} style={{ marginBottom: i < phones.length - 1 ? 96 : 0, textAlign: "center" }}>
               <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(24px, 3vw, 32px)", color: "#D8D5CC", marginBottom: 12 }}>{p.label}</h3>
               <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.75, color: "rgba(216,213,204,0.5)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>{p.desc}</p>
               <div style={{ display: "flex", justifyContent: "center", position: "relative" }}>
