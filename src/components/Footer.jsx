@@ -4,14 +4,14 @@ import acaLogo from "../assets/logo_acastructure.webp";
 const linkStyle = {
   fontFamily: "Inter, sans-serif", fontSize: 13,
   color: "rgba(216,213,204,0.55)", textDecoration: "none",
-  transition: "color 0.2s",
+  transition: "color 0.2s, transform 0.2s", display: "inline-block",
 };
-const hoverLink = e => e.currentTarget.style.color = "#D8D5CC";
-const leaveLink = e => e.currentTarget.style.color = "rgba(216,213,204,0.55)";
+const hoverLink = e => { e.currentTarget.style.color = "#D8D5CC"; e.currentTarget.style.transform = "translateY(-2px)"; };
+const leaveLink = e => { e.currentTarget.style.color = "rgba(216,213,204,0.55)"; e.currentTarget.style.transform = "translateY(0)"; };
 
-const iconStyle = { color: "rgba(216,213,204,0.55)", transition: "color 0.2s, filter 0.2s" };
-const hoverIcon = e => { e.currentTarget.style.color = "#D8D5CC"; e.currentTarget.style.filter = "drop-shadow(0 0 6px rgba(216,213,204,0.4))"; };
-const leaveIcon = e => { e.currentTarget.style.color = "rgba(216,213,204,0.55)"; e.currentTarget.style.filter = "none"; };
+const iconStyle = { color: "rgba(216,213,204,0.55)", transition: "color 0.2s, filter 0.2s, transform 0.2s", display: "inline-block" };
+const hoverIcon = e => { e.currentTarget.style.color = "#D8D5CC"; e.currentTarget.style.filter = "drop-shadow(0 0 6px rgba(216,213,204,0.4))"; e.currentTarget.style.transform = "translateY(-2px)"; };
+const leaveIcon = e => { e.currentTarget.style.color = "rgba(216,213,204,0.55)"; e.currentTarget.style.filter = "none"; e.currentTarget.style.transform = "translateY(0)"; };
 
 export default function Footer() {
   return (

@@ -39,10 +39,14 @@ export default function GradPathPage() {
           </p>
           {/* App store badges — sit just above the image */}
           <div style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center", position: "relative", zIndex: 2, marginBottom: -24 }}>
-            <a href="#" style={{ display: "inline-block", textDecoration: "none" }}>
+            <a href="#" style={{ display: "inline-block", textDecoration: "none", transition: "transform 0.2s, filter 0.2s" }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.filter = "drop-shadow(0 4px 12px rgba(255,255,255,0.15))"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.filter = "none"; }}>
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 40, width: "auto", display: "block" }} />
             </a>
-            <a href="#" style={{ display: "inline-block", textDecoration: "none" }}>
+            <a href="#" style={{ display: "inline-block", textDecoration: "none", transition: "transform 0.2s, filter 0.2s" }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.filter = "drop-shadow(0 4px 12px rgba(255,255,255,0.15))"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.filter = "none"; }}>
               <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 58, width: "auto", display: "block" }} />
             </a>
           </div>

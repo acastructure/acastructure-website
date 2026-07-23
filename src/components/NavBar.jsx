@@ -17,7 +17,9 @@ export default function NavBar() {
       <div className="nav-inner" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 48px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
         {/* Logo */}
-        <Link to="/" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none", flexShrink: 0 }}>
+        <Link to="/" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none", flexShrink: 0, transition: "transform 0.2s" }}
+          onMouseEnter={e => e.currentTarget.style.transform = "translateY(-2px)"}
+          onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}>
           <img src={acaLogo} alt="AcaStructure" style={{ height: 20, width: "auto" }} />
         </Link>
 
@@ -26,7 +28,7 @@ export default function NavBar() {
           {NAV_LINKS.map(l => {
             const active = location.pathname === l.to;
             return (
-              <Link key={l.to} to={l.to} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, textDecoration: "none", color: active ? "#fff" : "rgba(255,255,255,0.55)", borderBottom: active ? "2px solid #3A9A0A" : "2px solid transparent", paddingBottom: 2 }}>
+              <Link key={l.to} to={l.to} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, textDecoration: "none", color: active ? "#fff" : "rgba(255,255,255,0.55)", borderBottom: active ? "2px solid #3A9A0A" : "2px solid transparent", paddingBottom: 2, transition: "color 0.2s, transform 0.2s", display: "inline-block" }} onMouseEnter={e => e.currentTarget.style.transform = "translateY(-2px)"} onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}>
                 {l.label}
               </Link>
             );
