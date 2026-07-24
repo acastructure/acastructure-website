@@ -54,7 +54,9 @@ export default function GradPathPage() {
 
         {/* Hero image below, buttons slightly overlap top */}
         <div style={{ position: "relative", width: "100%", height: "60vh", overflow: "hidden" }}>
-          <img src={gradpathStudent} alt="Student using GradPath" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
+          <motion.img src={gradpathStudent} alt="Student using GradPath"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2, ease: "easeOut" }}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 40%)" }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 30%)" }} />

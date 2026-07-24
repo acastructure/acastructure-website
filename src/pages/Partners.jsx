@@ -37,7 +37,9 @@ export default function Partners() {
 
         {/* Hero image */}
         <div style={{ position: "relative", width: "100%", height: "60vh", overflow: "hidden" }}>
-          <img src={partnersHero} alt="Partners" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+          <motion.img src={partnersHero} alt="Partners"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2, ease: "easeOut" }}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 40%)" }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 25%)" }} />

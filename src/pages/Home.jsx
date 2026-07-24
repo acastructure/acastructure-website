@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6, ease: [0.22,1,0.36,1] }}
+          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, delay: 0.6, ease: [0.22,1,0.36,1] }}
           className="home-phone" style={{ position: "relative", maxWidth: 860, margin: "0 auto", marginLeft: "20%", marginRight: "20%" }}>
           <img src={heroPhone} alt="GradPath app on iPhone" style={{ width: "100%", height: "auto", display: "block" }} />
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "35%", background: "linear-gradient(to top, #000 0%, transparent 100%)", pointerEvents: "none" }} />
