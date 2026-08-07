@@ -93,32 +93,18 @@ export default function GradPathPage() {
 
       {/* PRICING */}
       <section className="section-pad" style={{ background: "#0A0A0A", paddingTop: 80, paddingBottom: 80, borderTop: "1px solid rgba(216,213,204,0.06)" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto" }}>
-          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 12 }}>Transparent pricing</p>
-          <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 42px)", color: "#D8D5CC", textAlign: "center", lineHeight: 1.1, marginBottom: 8 }}>
-            No Pay Walls. No Ads. No BS.
+        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", marginBottom: 12 }}>Pricing</p>
+          <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 42px)", color: "#D8D5CC", lineHeight: 1.1, marginBottom: 20 }}>
+            Free. Always.<br /><span style={{ color: "#3A9A0A" }}>For every student.</span>
           </h2>
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, color: "rgba(216,213,204,0.45)", textAlign: "center", marginBottom: 48 }}>
-            We believe in transparency, not hidden access and fees.
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 17px)", lineHeight: 1.85, color: "rgba(216,213,204,0.55)", maxWidth: 520, margin: "0 auto 40px" }}>
+            Students already carry enough. Tuition, textbooks, fees — GradPath will never be one of them. Access to your degree pathway should never come with a price tag.
           </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {[
-              { label: "Now through Dec 2026", price: "Free", detail: "Full access during the beta period at SFSU and CCSF.", note: "No payment required." },
-              { label: "Starting Jan 1, 2027", price: "$12/mo", detail: "Continued access for accounts created during the beta.", note: "Cancel anytime." },
-            ].map(p => (
-              <div key={p.label} style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "24px 28px", border: "1px solid rgba(216,213,204,0.07)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
-                <div>
-                  <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(216,213,204,0.3)", marginBottom: 6 }}>{p.label}</p>
-                  <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, color: "rgba(216,213,204,0.5)", marginBottom: 2 }}>{p.detail}</p>
-                  <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.25)" }}>{p.note}</p>
-                </div>
-                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(22px, 2.5vw, 28px)", color: "#D8D5CC", whiteSpace: "nowrap" }}>{p.price}</p>
-              </div>
-            ))}
+          <div style={{ background: "rgba(58,154,10,0.07)", borderRadius: 16, padding: "28px 36px", border: "1px solid rgba(58,154,10,0.2)", display: "inline-block" }}>
+            <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(28px, 4vw, 48px)", color: "#3A9A0A", marginBottom: 6 }}>$0</p>
+            <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(216,213,204,0.4)" }}>No cost. No catch. No expiration.</p>
           </div>
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.2)", textAlign: "center", marginTop: 20 }}>
-            🔒 Subscriptions are billed directly through AcaStructure via Stripe.
-          </p>
         </div>
       </section>
 
