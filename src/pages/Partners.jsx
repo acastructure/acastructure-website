@@ -1,12 +1,44 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import FadeUp from "../components/FadeUp";
-import partnersHero from "../assets/partners_hero.webp";
+
+const S = {
+  bg: "#F2EFE8", text: "#1A1A18", dim: "rgba(26,26,24,0.65)",
+  dimmer: "rgba(26,26,24,0.45)", border: "rgba(26,26,24,0.08)",
+  green: "#2E8008", red: "#B42814", amber: "#A86800",
+  cardBg: "#FBF9F4", cardWhite: "#fff",
+};
+const mono = { fontFamily: "IBM Plex Mono, monospace", fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase" };
+const serif = (size, color = S.text) => ({ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: size, color, lineHeight: 1.1 });
+const inter = (size, color) => ({ fontFamily: "Inter, sans-serif", fontSize: size, color, lineHeight: 1.85 });
+
+const accentCard = (color) => ({
+  background: S.cardWhite,
+  border: `1.5px solid ${color}33`,
+  borderRadius: 16, padding: 28, height: "100%",
+});
+
+const AUDIENCE = [
+  { color: S.green, title: "Universities & Community Colleges", text: "We're building directly from institutional bulletin data. If your school wants to be part of the pilot or explore how GradPath and EdVisor could serve your students and advisors, we want to hear from you." },
+  { color: S.amber, title: "Advisors & Articulation Officers", text: "You know the gaps better than anyone. We're building EdVisor specifically to support the work you already do — not replace it. Your expertise and feedback directly shape what we build." },
+  { color: S.red, title: "Researchers & Grant Bodies", text: "The articulation problem is a research problem as much as a technology problem. We're interested in collaborating with researchers working on transfer pathways, academic equity, and higher education data infrastructure." },
+  { color: S.text, title: "Government & Policy Organizations", text: "Academic data infrastructure has implications that extend well beyond individual institutions. If you work in education policy, workforce development, or government programs tied to student outcomes, we'd like to connect." },
+];
+
+const inputStyle = {
+  width: "100%", fontFamily: "Inter, sans-serif", fontSize: 14,
+  padding: "12px 16px", borderRadius: 8,
+  border: "1px solid rgba(26,26,24,0.15)",
+  background: "#fff", color: S.text, outline: "none",
+  boxSizing: "border-box",
+};
 
 export default function Partners() {
   const [form, setForm] = useState({ name: "", institution: "", role: "", email: "", message: "" });
   const [status, setStatus] = useState("idle");
+
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
+
   const handleSubmit = async () => {
     if (!form.name || !form.email || !form.message) return;
     setStatus("sending");
@@ -21,98 +53,128 @@ export default function Partners() {
   };
 
   return (
-    <div style={{ background: "#000", overflowX: "hidden" }}>
+    <div style={{ background: S.bg, overflowX: "hidden" }}>
 
-      {/* HERO — text on top, image below */}
-      <section className="section-pad-top" style={{ background: "#000" }}>
-        <div className="hero-pad" style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D8D5CC", marginBottom: 24 }}>Academic Partnerships</p>
-          <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.05, color: "#D8D5CC", marginBottom: 20 }}>
-            Let's build<br /><span style={{ color: "#3A9A0A" }}>together.</span>
-          </h1>
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "clamp(15px, 1.5vw, 18px)", lineHeight: 1.75, color: "rgba(216,213,204,0.65)", maxWidth: 560, margin: "0 auto 48px" }}>
-            AcaStructure is looking to collaborate with universities, faculty, advisors, articulation officers, and researchers who believe students deserve more clarity.
-          </p>
-        </div>
+      {/* HERO */}
+      <section className="section-pad section-pad-top" style={{ background: S.bg, paddingBottom: 72, textAlign: "center" }}>
+        <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
+          style={{ ...mono, color: S.dimmer, marginBottom: 24 }}>Academic Partnerships</motion.p>
+        <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          style={{ ...serif("clamp(32px, 5vw, 56px)"), marginBottom: 24 }}>
+          Building this system<br />requires more than <span style={{ color: S.red }}>two people.</span>
+        </motion.h1>
+        <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
+          style={{ ...inter(16, S.dim), maxWidth: 560, margin: "0 auto" }}>
+          AcaStructure is actively looking to collaborate with universities, community colleges, faculty, advisors, articulation officers, and researchers who believe students deserve more clarity — and that the institutions serving them deserve better tools.
+        </motion.p>
+      </section>
 
-        {/* Hero image */}
-        <div style={{ position: "relative", width: "100%", height: "60vh", overflow: "hidden" }}>
-          <motion.img src={partnersHero} alt="Partners"
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2, ease: "easeOut" }}
-            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
-          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #000 0%, transparent 40%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #000 0%, transparent 25%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #000 0%, transparent 20%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #000 0%, transparent 20%)" }} />
+      <div style={{ borderTop: `1px solid ${S.border}` }} />
+
+      {/* WHO WE WORK WITH */}
+      <section className="section-pad" style={{ background: S.bg, paddingTop: 72, paddingBottom: 72 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <FadeUp>
+            <p style={{ ...mono, color: S.dimmer, textAlign: "center", marginBottom: 48 }}>Who we work with</p>
+          </FadeUp>
+          <div className="two-col-cards">
+            {AUDIENCE.map((a, i) => (
+              <FadeUp key={a.title} delay={i * 0.08}>
+                <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.25 }} style={accentCard(a.color)}>
+                  <div style={{ width: 32, height: 3, background: a.color, marginBottom: 16, borderRadius: 2 }} />
+                  <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: 18, color: S.text, marginBottom: 10 }}>
+                    {a.title.replace(" & ", " ").split(" ").map((w, j, arr) => {
+                      if (a.title.includes(" & ") && w === a.title.split(" & ")[0].split(" ").pop()) {
+                        return <span key={j}>{w} <span style={{ fontFamily: "Inter, sans-serif" }}>&</span> </span>;
+                      }
+                      return w + (j < arr.length - 1 ? " " : "");
+                    })}
+                  </h3>
+                  <p style={{ ...inter(13, S.dim) }}>{a.text}</p>
+                </motion.div>
+              </FadeUp>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* AUDIENCE CARDS */}
-      <section className="section-pad" style={{ background: "#000", paddingTop: 80, paddingBottom: 80 }}>
-        <div className="audience-grid" style={{ maxWidth: 900, margin: "0 auto" }}>
-          {[
-            { icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><rect x="6" y="22" width="36" height="22" rx="1"/><path d="M2 22l22-16 22 16"/><line x1="18" y1="44" x2="18" y2="30"/><line x1="30" y1="44" x2="30" y2="30"/><line x1="18" y1="30" x2="30" y2="30"/></svg>, title: "Universities & CCs", desc: "Explore how GradPath can complement your existing student experience." },
-            { icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="16" cy="16" r="7"/><circle cx="32" cy="16" r="7"/><path d="M4 44c0-8 5-13 12-13h16c7 0 12 5 12 13"/></svg>, title: "Faculty & Advisors", desc: "Help us refine the tools students rely on every semester." },
-            { icon: <svg width="36" height="36" fill="none" stroke="#3A9A0A" strokeWidth="1.5" viewBox="0 0 48 48"><circle cx="24" cy="20" r="11"/><line x1="32" y1="29" x2="42" y2="40"/><circle cx="42" cy="40" r="4"/></svg>, title: "Researchers", desc: "Share ideas that help build better academic infrastructure." },
-          ].map((a, i) => (
-            <FadeUp key={a.title} delay={i * 0.1}>
-              <motion.div
-                whileHover={{ y: -4, borderColor: "rgba(58,154,10,0.3)" }}
-                transition={{ duration: 0.25 }}
-                style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "32px 28px", border: "1px solid rgba(216,213,204,0.07)", textAlign: "center", height: "100%" }}>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: 20 }}>{a.icon}</div>
-                <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: "clamp(17px, 2vw, 20px)", color: "#D8D5CC", marginBottom: 10 }}>{a.title}</h3>
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(216,213,204,0.5)" }}>{a.desc}</p>
-              </motion.div>
+      <div style={{ borderTop: `1px solid ${S.border}` }} />
+
+      {/* WHAT PARTNERSHIP LOOKS LIKE */}
+      <section className="section-pad" style={{ background: "#EBE8E0", paddingTop: 72, paddingBottom: 72 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div className="two-col">
+            <FadeUp>
+              <p style={{ ...mono, color: S.dimmer, marginBottom: 20 }}>What partnership looks like</p>
+              <h2 style={{ ...serif("clamp(22px, 2.8vw, 32px)"), lineHeight: 1.25 }}>We're not selling anything yet. We're building something real.</h2>
             </FadeUp>
-          ))}
+            <FadeUp delay={0.15}>
+              <div style={{ paddingTop: 36 }}>
+                <p style={{ ...inter(15, S.dim), marginBottom: 20 }}>Right now we're looking for institutions and individuals willing to engage honestly — share problems, review what we're building, tell us where we're wrong. Early partnerships shape the system at a foundational level.</p>
+                <p style={{ ...inter(15, S.dim) }}>We understand institutional timelines, procurement realities, and administrative constraints. We're not asking anyone to move fast. We're asking them to move with us.</p>
+              </div>
+            </FadeUp>
+          </div>
         </div>
       </section>
+
+      <div style={{ borderTop: `1px solid ${S.border}` }} />
 
       {/* CONTACT FORM */}
-      <section className="section-pad" style={{ background: "#0A0A0A", paddingTop: 80, paddingBottom: 80, borderTop: "1px solid rgba(216,213,204,0.06)" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto" }}>
-          <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D8D5CC", textAlign: "center", marginBottom: 12 }}>Get In Touch</p>
-          <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 42px)", color: "#D8D5CC", textAlign: "center", lineHeight: 1.1, marginBottom: 12 }}>
-            Reach out to us.
-          </h2>
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.75, color: "rgba(216,213,204,0.5)", textAlign: "center", marginBottom: 48 }}>
-            Whether you're exploring collaboration, sharing research, improving advising workflows, or simply curious about what we're building — we'd be happy to start a conversation.
-          </p>
+      <section className="section-pad" style={{ background: S.bg, paddingTop: 72, paddingBottom: 72 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <FadeUp>
+            <p style={{ ...mono, color: S.dimmer, textAlign: "center", marginBottom: 16 }}>Get in touch</p>
+            <h2 style={{ ...serif("clamp(24px, 3vw, 38px)"), textAlign: "center", marginBottom: 12 }}>Reach out to us.</h2>
+            <p style={{ ...inter(15, S.dim), textAlign: "center", maxWidth: 480, margin: "0 auto 48px" }}>
+              Whether you're exploring a collaboration, sharing research, or simply curious about what we're building — we'd love to start a conversation.
+            </p>
+          </FadeUp>
 
-          <div style={{ background: "rgba(216,213,204,0.03)", borderRadius: 16, padding: "36px", border: "1px solid rgba(216,213,204,0.07)" }}>
+          <div style={{ background: S.cardBg, border: `1px solid ${S.border}`, borderRadius: 16, padding: 36, maxWidth: 680, margin: "0 auto" }}>
             {status === "sent" ? (
               <div style={{ textAlign: "center", padding: "40px 0" }}>
-                <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(58,154,10,0.15)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
-                  <svg width="24" height="24" fill="none" stroke="#3A9A0A" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(46,128,8,0.1)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+                  <svg width="24" height="24" fill="none" stroke={S.green} strokeWidth="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" /></svg>
                 </div>
-                <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 20, color: "#D8D5CC", marginBottom: 8 }}>Message sent.</h3>
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 14, color: "rgba(216,213,204,0.5)" }}>We'll be in touch soon.</p>
+                <h3 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 20, color: S.text, marginBottom: 8 }}>Message sent.</h3>
+                <p style={{ ...inter(14, S.dim) }}>We'll be in touch soon.</p>
               </div>
             ) : (
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 <div className="partners-form-grid">
-                  <input name="name" value={form.name} onChange={handleChange} placeholder="Full Name" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none" }} />
-                  <input name="institution" value={form.institution} onChange={handleChange} placeholder="Institution (optional)" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none" }} />
+                  <input name="name" value={form.name} onChange={handleChange} placeholder="Full name" style={inputStyle} />
+                  <input name="institution" value={form.institution} onChange={handleChange} placeholder="Institution (optional)" style={inputStyle} />
                 </div>
                 <div className="partners-form-grid">
                   <div style={{ position: "relative" }}>
-                    <select name="role" value={form.role} onChange={handleChange} style={{ width: "100%", fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: form.role ? "#D8D5CC" : "rgba(216,213,204,0.35)", outline: "none", appearance: "none" }}>
-                      <option value="">Your Role</option>
-                      <option>Administrator</option><option>Faculty</option><option>Advisor</option><option>Researcher</option><option>Student</option><option>Other</option>
+                    <select name="role" value={form.role} onChange={handleChange} style={{ ...inputStyle, appearance: "none", color: form.role ? S.text : "rgba(26,26,24,0.4)" }}>
+                      <option value="">Your role</option>
+                      <option>Administrator</option>
+                      <option>Faculty</option>
+                      <option>Advisor</option>
+                      <option>Articulation Officer</option>
+                      <option>Researcher</option>
+                      <option>Government / Policy</option>
+                      <option>Student</option>
+                      <option>Other</option>
                     </select>
-                    <span style={{ position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", color: "rgba(216,213,204,0.35)", pointerEvents: "none" }}>▾</span>
+                    <span style={{ position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", color: S.dimmer, pointerEvents: "none" }}>▾</span>
                   </div>
-                  <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="Email Address" style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none" }} />
+                  <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="Email address" style={inputStyle} />
                 </div>
-                <textarea name="message" value={form.message} onChange={handleChange} rows={5} placeholder="Tell us how you'd like to collaborate or what you're interested in..." style={{ fontFamily: "Inter, sans-serif", fontSize: 14, padding: "12px 16px", borderRadius: 8, border: "1px solid rgba(216,213,204,0.12)", background: "rgba(216,213,204,0.05)", color: "#D8D5CC", outline: "none", resize: "none" }} />
-                {status === "error" && <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: "#DC2626" }}>Something went wrong. Email admin@acastructure.com directly.</p>}
-                <button onClick={handleSubmit} disabled={status === "sending"} style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, padding: "14px", borderRadius: 8, border: "none", background: "#3A9A0A", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
-                  <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <textarea name="message" value={form.message} onChange={handleChange} rows={5}
+                  placeholder="Tell us how you'd like to collaborate or what you're interested in..."
+                  style={{ ...inputStyle, resize: "none" }} />
+                {status === "error" && <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, color: S.red }}>Something went wrong. Email admin@acastructure.com directly.</p>}
+                <button onClick={handleSubmit} disabled={status === "sending"}
+                  style={{ fontFamily: "Inter, sans-serif", fontSize: 14, fontWeight: 600, padding: 14, borderRadius: 8, border: "none", background: "#1A1A18", color: "#F2EFE8", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 8, transition: "box-shadow 0.2s, transform 0.2s" }}
+                  onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 4px 16px rgba(26,26,24,0.2)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}>
+                  <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
                   {status === "sending" ? "Sending..." : "Send Message"}
                 </button>
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "rgba(216,213,204,0.25)", textAlign: "center" }}>🔒 We respect your privacy. Your information will never be shared.</p>
+                <p style={{ ...mono, color: "rgba(26,26,24,0.35)", textAlign: "center", marginTop: 4 }}>🔒 Your information will never be shared.</p>
               </div>
             )}
           </div>
