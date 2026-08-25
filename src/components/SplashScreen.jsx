@@ -2,18 +2,19 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import acaLogo from "../assets/logo_acastructure.webp";
 
-function supportsWebMAlpha() {
-  const video = document.createElement("video");
-  return video.canPlayType('video/webm; codecs="vp9"') === "probably" ||
-         video.canPlayType('video/webm; codecs="vp9"') === "maybe";
+function isSafariOrIOS() {
+  const ua = navigator.userAgent;
+  return /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) ||
+    (/Safari/.test(ua) && !/Chrome/.test(ua));
 }
 
 export default function SplashScreen() {
   const [visible, setVisible] = useState(false);
-  const [webmSupported, setWebmSupported] = useState(true);
+  const [useVideo, setUseVideo] = useState(true);
 
   useEffect(() => {
-    setWebmSupported(supportsWebMAlpha());
+    setUseVideo(!isSafariOrIOS());
     if (!sessionStorage.getItem("splashShown")) {
       setVisible(true);
       sessionStorage.setItem("splashShown", "true");
@@ -39,7 +40,7 @@ export default function SplashScreen() {
             justifyContent: "center",
           }}
         >
-          {webmSupported ? (
+          {useVideo ? (
             /* Desktop — transparent WebM */
             <video
               autoPlay
