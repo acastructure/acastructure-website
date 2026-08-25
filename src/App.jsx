@@ -9,6 +9,7 @@ function ScrollToTop() {
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import SplashScreen from "./components/SplashScreen";
 import Home from "./pages/Home";
 import GradPathPage from "./pages/GradPathPage";
 import Partners from "./pages/Partners";
@@ -22,6 +23,7 @@ import BetaProgramAgreement from "./pages/BetaProgramAgreement";
 function App() {
   return (
     <BrowserRouter>
+      <SplashScreen />
       <ScrollToTop />
       <NavBar />
       <Routes>
