@@ -1,20 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function isSafariOrIOS() {
-  const ua = navigator.userAgent;
-  return /iPad|iPhone|iPod/.test(ua) ||
-    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) ||
-    (/Safari/.test(ua) && !/Chrome/.test(ua));
-}
-
 export default function SplashScreen() {
   const [visible, setVisible] = useState(false);
-  const [bgColor, setBgColor] = useState("#F2EFE8");
 
   useEffect(() => {
-    // On Safari/iOS match the video's white background exactly
-    if (isSafariOrIOS()) setBgColor("#F0EDE6");
     if (!sessionStorage.getItem("splashShown")) {
       setVisible(true);
       sessionStorage.setItem("splashShown", "true");
@@ -33,7 +23,7 @@ export default function SplashScreen() {
           style={{
             position: "fixed",
             inset: 0,
-            background: bgColor,
+            background: "#F0EDE6",
             zIndex: 9999,
             display: "flex",
             alignItems: "center",
