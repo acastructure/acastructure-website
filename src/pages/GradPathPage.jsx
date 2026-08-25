@@ -36,7 +36,7 @@ export default function GradPathPage() {
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
             style={{ display: "flex", justifyContent: "center", marginBottom: 24 }}>
-            <img src={logoGradPath} alt="GradPath" style={{ height: "clamp(36px, 4.5vw, 56px)", width: "auto" }} />
+            <img src={logoGradPath} alt="GradPath" style={{ height: "clamp(36px, 4.5vw, 56px)", width: "auto", filter: "brightness(0.6) saturate(1.4)" }} />
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
