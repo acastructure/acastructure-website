@@ -16,18 +16,18 @@ const sections = [
 
 export default function TermsOfService() {
   return (
-    <div style={{ background: "#000", minHeight: "100vh", color: "#D8D5CC" }}>
+    <div style={{ background: "#F2EFE8", minHeight: "100vh", color: "#1A1A18" }}>
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "80px 48px" }}>
-        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#3A9A0A", marginBottom: 16 }}>AcaStructure LLC</p>
-        <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(32px, 4vw, 48px)", color: "#D8D5CC", marginBottom: 8 }}>Terms of Service</h1>
-        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, color: "rgba(216,213,204,0.4)", marginBottom: 64 }}>Effective Date: July 2026</p>
+        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", color: "#2E8008", marginBottom: 16 }}>AcaStructure LLC</p>
+        <h1 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(32px, 4vw, 48px)", color: "#1A1A18", marginBottom: 8 }}>Terms of Service</h1>
+        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, color: "rgba(26,26,24,0.45)", marginBottom: 64 }}>Effective Date: July 2026</p>
         {sections.map((s, i) => (
-          <div key={i} style={{ marginBottom: 40, paddingBottom: 40, borderBottom: "1px solid rgba(216,213,204,0.08)", borderLeft: s.highlight ? "2px solid rgba(220,38,38,0.5)" : "none", paddingLeft: s.highlight ? 20 : 0 }}>
-            <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 20, color: "#D8D5CC", marginBottom: 12 }}>{s.title}</h2>
-            <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(216,213,204,0.65)" }}>{s.body}</p>
+          <div key={i} style={{ marginBottom: 40, paddingBottom: 40, borderBottom: "1px solid rgba(26,26,24,0.08)", borderLeft: s.highlight ? "2px solid rgba(220,38,38,0.5)" : "none", paddingLeft: s.highlight ? 20 : 0 }}>
+            <h2 style={{ fontFamily: "Playfair Display, serif", fontWeight: 600, fontSize: 20, color: "#1A1A18", marginBottom: 12 }}>{s.title}</h2>
+            <p style={{ fontFamily: "Inter, sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(26,26,24,0.65)" }}>{s.body}</p>
           </div>
         ))}
-        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, color: "rgba(216,213,204,0.3)", marginTop: 40 }}>AcaStructure LLC — admin@acastructure.com</p>
+        <p style={{ fontFamily: "IBM Plex Mono, monospace", fontSize: 11, color: "rgba(26,26,24,0.35)", marginTop: 40 }}>AcaStructure LLC — admin@acastructure.com</p>
       </div>
     </div>
   );

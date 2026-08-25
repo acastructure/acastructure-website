@@ -77,8 +77,9 @@ export default function Home() {
           <FadeUp>
             <p style={{ ...mono, color: S.dimmer, textAlign: "center", marginBottom: 48 }}>How it works</p>
           </FadeUp>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 36px 1fr 36px 1fr", alignItems: "center", gap: 8 }}>
+          <div className="loop-cards">
 
+            <div className="loop-card">
             <FadeUp delay={0.1}>
               <div style={{ ...accentCard(S.green), textAlign: "center" }}>
                 <div style={iconBox(S.green)}>🎓</div>
@@ -87,9 +88,11 @@ export default function Home() {
                 <p style={{ ...inter(13, S.dim) }}>Map degree requirements, plan semesters, and navigate transfer pathways — free, always.</p>
               </div>
             </FadeUp>
+            </div>
 
-            <p style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
+            <p className="loop-arrow" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
 
+            <div className="loop-card">
             <FadeUp delay={0.2}>
               <div style={{ ...accentCard(S.red), textAlign: "center" }}>
                 <div style={iconBox(S.red)}>◈</div>
@@ -98,9 +101,11 @@ export default function Home() {
                 <p style={{ ...inter(13, S.dim) }}>Academic data flows into connected infrastructure — structured, maintained, and continuously refined.</p>
               </div>
             </FadeUp>
+            </div>
 
-            <p style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
+            <p className="loop-arrow" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
 
+            <div className="loop-card">
             <FadeUp delay={0.3}>
               <div style={{ ...accentCard(S.amber), textAlign: "center" }}>
                 <div style={iconBox(S.amber)}>🏛️</div>
@@ -109,6 +114,7 @@ export default function Home() {
                 <p style={{ ...inter(13, S.dim) }}>Universities, advisors, and articulation officers get tools built on real, structured academic intelligence.</p>
               </div>
             </FadeUp>
+            </div>
 
           </div>
           <FadeUp delay={0.35}>
