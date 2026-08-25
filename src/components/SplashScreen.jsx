@@ -23,7 +23,7 @@ export default function SplashScreen() {
           style={{
             position: "fixed",
             inset: 0,
-            background: "#000000",
+            background: "#F2EFE8",
             zIndex: 9999,
             display: "flex",
             alignItems: "center",
@@ -34,7 +34,11 @@ export default function SplashScreen() {
             autoPlay
             muted
             playsInline
-            style={{ width: "clamp(180px, 35vw, 360px)", height: "auto" }}
+            style={{
+              width: "clamp(180px, 35vw, 360px)",
+              height: "auto",
+              mixBlendMode: "screen",
+            }}
           >
             <source src="/logo_splash.webm" type="video/webm" />
             <source src="/logo_splash.mp4" type="video/mp4" />
