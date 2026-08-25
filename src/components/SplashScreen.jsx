@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+function supportsWebMAlpha() {
+  const video = document.createElement("video");
+  return video.canPlayType('video/webm; codecs="vp9"') === "probably" ||
+         video.canPlayType('video/webm; codecs="vp9"') === "maybe";
+}
+
 export default function SplashScreen() {
   const [visible, setVisible] = useState(false);
+  const [webmSupported, setWebmSupported] = useState(true);
 
   useEffect(() => {
-    // Only show once per session
+    setWebmSupported(supportsWebMAlpha());
     if (!sessionStorage.getItem("splashShown")) {
       setVisible(true);
       sessionStorage.setItem("splashShown", "true");
-      // Fade out after 3 seconds
       const timer = setTimeout(() => setVisible(false), 3000);
       return () => clearTimeout(timer);
     }
@@ -39,6 +45,7 @@ export default function SplashScreen() {
             style={{
               width: "clamp(180px, 35vw, 360px)",
               height: "auto",
+              mixBlendMode: webmSupported ? "normal" : "multiply",
             }}
           >
             <source src="/logo_splash.webm" type="video/webm" />
