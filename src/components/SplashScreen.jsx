@@ -14,7 +14,7 @@ export default function SplashScreen() {
 
   useEffect(() => {
     // On Safari/iOS match the video's white background exactly
-    if (isSafariOrIOS()) setBgColor("#FFFFFF");
+    if (isSafariOrIOS()) setBgColor("#F0EDE6");
     if (!sessionStorage.getItem("splashShown")) {
       setVisible(true);
       sessionStorage.setItem("splashShown", "true");
