@@ -70,11 +70,11 @@ export default function GradPathPage() {
           <motion.img src={gradpathStudent} alt="Student using GradPath"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2, ease: "easeOut" }}
             style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
-          <div style={{ position: "absolute", inset: 0, background: "rgba(242,239,232,0.15)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #F2EFE8 0%, transparent 45%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #F2EFE8 0%, transparent 25%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #F2EFE8 0%, transparent 20%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #F2EFE8 0%, transparent 20%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "rgba(242,239,232,0.05)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #F2EFE8 0%, transparent 25%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #F2EFE8 0%, transparent 12%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #F2EFE8 0%, transparent 10%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #F2EFE8 0%, transparent 10%)" }} />
         </div>
       </section>
 
@@ -95,10 +95,6 @@ export default function GradPathPage() {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                   style={{ position: "relative", width: "100%", maxWidth: p.label === "See your future." ? 440 : 360 }}>
                   <img src={p.src} alt={p.label} style={{ width: "100%", height: "auto", borderRadius: 32, display: "block", boxShadow: "0 24px 64px rgba(26,26,24,0.12), 0 0 0 1px rgba(26,26,24,0.06)" }} />
-                  <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to right, rgba(242,239,232,0.3) 0%, transparent 18%)" }} />
-                  <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to left, rgba(242,239,232,0.3) 0%, transparent 18%)" }} />
-                  <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to bottom, rgba(242,239,232,0.3) 0%, transparent 18%)" }} />
-                  <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(to top, rgba(242,239,232,0.3) 0%, transparent 18%)" }} />
                 </motion.div>
               </div>
             </FadeUp>
