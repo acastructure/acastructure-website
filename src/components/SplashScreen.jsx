@@ -1,31 +1,23 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+function isMobile() {
+  return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+}
 
 export default function SplashScreen() {
   const [visible, setVisible] = useState(false);
-  const videoRef = useRef(null);
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
+    setMobile(isMobile());
     if (!sessionStorage.getItem("splashShown")) {
       setVisible(true);
       sessionStorage.setItem("splashShown", "true");
-
-      // Force play on iOS — needs to be triggered after mount
-      if (videoRef.current) {
-        videoRef.current.play().catch(() => {});
-      }
-
       const timer = setTimeout(() => setVisible(false), 3000);
       return () => clearTimeout(timer);
     }
   }, []);
-
-  // Also try to play once video is ready
-  const handleCanPlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
-  };
 
   return (
     <AnimatePresence>
@@ -40,22 +32,35 @@ export default function SplashScreen() {
             background: "#F2EFE8",
             zIndex: 9999,
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            gap: 24,
           }}
         >
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            playsInline
-            preload="auto"
-            onCanPlay={handleCanPlay}
-            style={{ width: "clamp(200px, 40vw, 400px)", height: "auto" }}
-          >
-            <source src="/logo_splash.mp4" type="video/mp4" />
-            <source src="/logo_splash.webm" type="video/webm" />
-          </video>
+          {mobile ? (
+            /* Mobile — animated logo image, guaranteed to work */
+            <motion.img
+              src="/logo_splash_frame.png"
+              alt="AcaStructure"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              style={{ width: "clamp(160px, 45vw, 280px)", height: "auto" }}
+            />
+          ) : (
+            /* Desktop — full video */
+            <video
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
+              style={{ width: "clamp(200px, 40vw, 400px)", height: "auto" }}
+            >
+              <source src="/logo_splash.mp4" type="video/mp4" />
+              <source src="/logo_splash.webm" type="video/webm" />
+            </video>
+          )}
         </motion.div>
       )}
     </AnimatePresence>
