@@ -52,30 +52,23 @@ img { max-width: 100%; height: auto; }
   .home-phone { margin-left: 5% !important; margin-right: 5% !important; }
 }
 
-/* ── Loop cards mobile carousel ── */
+/* ── Loop cards ── */
 .loop-cards {
   display: grid;
   grid-template-columns: 1fr 36px 1fr 36px 1fr;
   align-items: center;
   gap: 8px;
 }
+.loop-arrow-h { display: block; }
+.loop-arrow-v { display: none; }
 
 @media (max-width: 767px) {
   .loop-cards {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 16px;
-    padding-bottom: 16px;
-    /* hide scrollbar */
-    scrollbar-width: none;
+    flex-direction: column;
+    gap: 0;
   }
-  .loop-cards::-webkit-scrollbar { display: none; }
-  .loop-card {
-    min-width: 80vw;
-    scroll-snap-align: center;
-    flex-shrink: 0;
-  }
-  .loop-arrow { display: none; }
+  .loop-card { width: 100%; }
+  .loop-arrow-h { display: none; }
+  .loop-arrow-v { display: flex; justify-content: center; align-items: center; color: rgba(26,26,24,0.2); font-size: 20px; padding: 8px 0; }
 }

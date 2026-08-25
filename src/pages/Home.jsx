@@ -80,40 +80,42 @@ export default function Home() {
           <div className="loop-cards">
 
             <div className="loop-card">
-            <FadeUp delay={0.1}>
-              <div style={{ ...accentCard(S.green), textAlign: "center" }}>
-                <div style={iconBox(S.green)}>🎓</div>
-                <p style={{ ...mono, color: S.green, marginBottom: 8 }}>GradPath</p>
-                <p style={{ ...serif("17px"), marginBottom: 8 }}>Students</p>
-                <p style={{ ...inter(13, S.dim) }}>Map degree requirements, plan semesters, and navigate transfer pathways — free, always.</p>
-              </div>
-            </FadeUp>
+              <FadeUp delay={0.1}>
+                <div style={{ ...accentCard(S.green), textAlign: "center" }}>
+                  <div style={iconBox(S.green)}>🎓</div>
+                  <p style={{ ...mono, color: S.green, marginBottom: 8 }}>GradPath</p>
+                  <p style={{ ...serif("17px"), marginBottom: 8 }}>Students</p>
+                  <p style={{ ...inter(13, S.dim) }}>Map degree requirements, plan semesters, and navigate transfer pathways — free, always.</p>
+                </div>
+              </FadeUp>
             </div>
 
-            <p className="loop-arrow" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
+            <p className="loop-arrow-h" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
+            <p className="loop-arrow-v">↓</p>
 
             <div className="loop-card">
-            <FadeUp delay={0.2}>
-              <div style={{ ...accentCard(S.red), textAlign: "center" }}>
-                <div style={iconBox(S.red)}>◈</div>
-                <p style={{ ...mono, color: S.red, marginBottom: 8 }}>The Core</p>
-                <p style={{ ...serif("17px"), marginBottom: 8 }}>The Data</p>
-                <p style={{ ...inter(13, S.dim) }}>Academic data flows into connected infrastructure — structured, maintained, and continuously refined.</p>
-              </div>
-            </FadeUp>
+              <FadeUp delay={0.2}>
+                <div style={{ ...accentCard(S.red), textAlign: "center" }}>
+                  <div style={iconBox(S.red)}>◈</div>
+                  <p style={{ ...mono, color: S.red, marginBottom: 8 }}>The Core</p>
+                  <p style={{ ...serif("17px"), marginBottom: 8 }}>The Data</p>
+                  <p style={{ ...inter(13, S.dim) }}>Academic data flows into connected infrastructure — structured, maintained, and continuously refined.</p>
+                </div>
+              </FadeUp>
             </div>
 
-            <p className="loop-arrow" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
+            <p className="loop-arrow-h" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
+            <p className="loop-arrow-v">↓</p>
 
             <div className="loop-card">
-            <FadeUp delay={0.3}>
-              <div style={{ ...accentCard(S.amber), textAlign: "center" }}>
-                <div style={iconBox(S.amber)}>🏛️</div>
-                <p style={{ ...mono, color: S.amber, marginBottom: 8 }}>EdVisor</p>
-                <p style={{ ...serif("17px"), marginBottom: 8 }}>Institutions</p>
-                <p style={{ ...inter(13, S.dim) }}>Universities, advisors, and articulation officers get tools built on real, structured academic intelligence.</p>
-              </div>
-            </FadeUp>
+              <FadeUp delay={0.3}>
+                <div style={{ ...accentCard(S.amber), textAlign: "center" }}>
+                  <div style={iconBox(S.amber)}>🏛️</div>
+                  <p style={{ ...mono, color: S.amber, marginBottom: 8 }}>EdVisor</p>
+                  <p style={{ ...serif("17px"), marginBottom: 8 }}>Institutions</p>
+                  <p style={{ ...inter(13, S.dim) }}>Universities, advisors, and articulation officers get tools built on real, structured academic intelligence.</p>
+                </div>
+              </FadeUp>
             </div>
 
           </div>

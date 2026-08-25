@@ -70,11 +70,10 @@ export default function GradPathPage() {
           <motion.img src={gradpathStudent} alt="Student using GradPath"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2, ease: "easeOut" }}
             style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
-          <div style={{ position: "absolute", inset: 0, background: "rgba(242,239,232,0.05)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #F2EFE8 0%, transparent 25%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #F2EFE8 0%, transparent 12%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #F2EFE8 0%, transparent 10%)" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #F2EFE8 0%, transparent 10%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #F2EFE8 0%, transparent 12%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, #F2EFE8 0%, transparent 6%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #F2EFE8 0%, transparent 5%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to left, #F2EFE8 0%, transparent 5%)" }} />
         </div>
       </section>
 
