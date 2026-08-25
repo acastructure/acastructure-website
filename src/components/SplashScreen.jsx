@@ -39,9 +39,9 @@ export default function SplashScreen() {
             style={{
               width: "clamp(180px, 35vw, 360px)",
               height: "auto",
-              mixBlendMode: "multiply",
             }}
           >
+            <source src="/logo_splash.webm" type="video/webm" />
             <source src="/logo_splash.mp4" type="video/mp4" />
           </video>
         </motion.div>
