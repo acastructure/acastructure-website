@@ -59,8 +59,8 @@ img { max-width: 100%; height: auto; }
   align-items: center;
   gap: 8px;
 }
-.loop-arrow-h { display: block; }
-.loop-arrow-v { display: none; }
+.loop-arrow-h { display: flex; }
+.loop-arrow-v { display: none !important; }
 
 @media (max-width: 767px) {
   .loop-cards {
@@ -69,6 +69,6 @@ img { max-width: 100%; height: auto; }
     gap: 0;
   }
   .loop-card { width: 100%; }
-  .loop-arrow-h { display: none; }
-  .loop-arrow-v { display: flex; justify-content: center; align-items: center; color: rgba(26,26,24,0.2); font-size: 20px; padding: 8px 0; }
+  .loop-arrow-h { display: none !important; }
+  .loop-arrow-v { display: flex !important; justify-content: center; align-items: center; padding: 12px 0; }
 }
