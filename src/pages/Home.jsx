@@ -141,7 +141,7 @@ export default function Home() {
                   <span style={{ ...mono(S.green) }}>Live now</span>
                 </div>
                 <h2 style={{ ...serif("24px"), marginBottom: 10 }}>GradPath</h2>
-                <p style={{ ...inter(13), marginBottom: 8, fontWeight: 500, color: S.text }}>The student-facing layer of AcaStructure.</p>
+                <p style={{ ...inter(13), marginBottom: 8, fontWeight: 500, color: S.text }}>The student-facing window of AcaStructure.</p>
                 <p style={{ ...inter(13), marginBottom: 20 }}>Academic intelligence translated into something students can actually use — helping them understand requirements, pathways, progress, and the consequences of academic decisions.</p>
                 <p style={{ ...mono(S.green) }}>Free for every student →</p>
               </div>
@@ -152,7 +152,7 @@ export default function Home() {
                   <span style={{ ...mono(S.amber) }}>In development</span>
                 </div>
                 <h2 style={{ ...serif("24px"), marginBottom: 10 }}>EdVisor</h2>
-                <p style={{ ...inter(13), marginBottom: 8, fontWeight: 500, color: S.text }}>The institution-facing layer of AcaStructure.</p>
+                <p style={{ ...inter(13), marginBottom: 8, fontWeight: 500, color: S.text }}>The institution-facing window of AcaStructure.</p>
                 <p style={{ ...inter(13), marginBottom: 20 }}>Tools designed to help institutions understand, manage, and validate the academic structures and relationships their students depend on.</p>
                 <p style={{ ...mono(S.amber) }}>For institutions →</p>
               </div>
