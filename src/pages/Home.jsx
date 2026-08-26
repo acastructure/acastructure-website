@@ -35,7 +35,7 @@ export default function Home() {
 
           <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
             style={{ ...inter(17), maxWidth: 560, margin: "0 auto 40px" }}>
-            Building the intelligence infrastructure that helps education understand itself.
+            Building the intelligence infrastructure that helps education understand itself — shaped by the people and institutions who understand it best.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
