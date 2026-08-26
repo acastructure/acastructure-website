@@ -24,7 +24,7 @@ const inputStyle = {
 const AUDIENCE = [
   {
     color: S.green,
-    title: "Universities & Community Colleges",
+    title: "Universities and Community Colleges",
     eyebrow: "Institutional knowledge is essential.",
     text: "Every institution has its own academic structure, policies, history, and ways of interpreting requirements. We work with colleges and universities to better understand those structures and build infrastructure that reflects how education actually operates — not simply how it appears on paper.",
   },
@@ -36,13 +36,13 @@ const AUDIENCE = [
   },
   {
     color: S.red,
-    title: "Researchers & Grant Organizations",
+    title: "Researchers and Grant Organizations",
     eyebrow: "Education intelligence is also a research problem.",
     text: "Understanding how courses, programs, institutions, pathways, policies, and student outcomes relate requires work across education, technology, data, and human decision-making. We're interested in collaborating with researchers and organizations exploring transfer, educational mobility, academic infrastructure, interoperability, institutional change, and the systems that shape student pathways.",
   },
   {
     color: S.text,
-    title: "Government & Policy Organizations",
+    title: "Government and Policy Organizations",
     eyebrow: "Education doesn't stop at institutional boundaries.",
     text: "Academic structures connect institutions, systems, regions, workforce needs, and public policy. We welcome conversations with public agencies and policy organizations exploring how better education infrastructure can improve visibility into these relationships while preserving institutional authority and human judgment.",
   },
@@ -87,7 +87,7 @@ export default function Partners() {
           AcaStructure is building intelligence infrastructure alongside the people and institutions who understand how education actually works — its rules, relationships, exceptions, decisions, and constant change.
         </motion.p>
         <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
-          style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(16px, 2vw, 20px)", color: S.text, maxWidth: 560, margin: "0 auto", fontStyle: "italic" }}>
+          style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(16px, 2vw, 20px)", color: S.text, maxWidth: 560, margin: "0 auto" }}>
           Because the people who understand the system should help shape the intelligence built around it.
         </motion.p>
       </section>
@@ -140,7 +140,7 @@ export default function Partners() {
             </FadeUp>
             <FadeUp delay={0.15}>
               <div style={{ paddingTop: 36 }}>
-                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(16px, 2vw, 20px)", color: S.text, marginBottom: 24, fontStyle: "italic" }}>
+                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(16px, 2vw, 20px)", color: S.text, marginBottom: 24 }}>
                   We're asking you to help us ask better questions.
                 </p>
                 <p style={{ ...inter(15), marginBottom: 16 }}>AcaStructure is still being built. Early partnerships help us understand where academic information becomes difficult to interpret, where institutional knowledge matters most, and where technology should — and should not — participate.</p>
@@ -166,7 +166,7 @@ export default function Partners() {
             <p style={{ ...inter(16), textAlign: "center", maxWidth: 540, margin: "0 auto 12px" }}>
               Whether you're an institution, educator, researcher, policymaker, or organization thinking deeply about the future of education infrastructure, we'd like to hear from you.
             </p>
-            <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(15px, 1.8vw, 18px)", color: S.text, textAlign: "center", fontStyle: "italic", marginBottom: 48 }}>
+            <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(15px, 1.8vw, 18px)", color: S.text, textAlign: "center", marginBottom: 48 }}>
               Tell us what you understand that the data doesn't.
             </p>
           </FadeUp>
