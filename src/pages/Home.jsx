@@ -71,10 +71,9 @@ export default function Home() {
               </FadeUp>
             </div>
 
-            {/* GradPath ↔ Core arrows */}
-            <div className="loop-arrow-h" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8 }}>
+            {/* GradPath → Core */}
+            <div className="loop-arrow-h" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
               <span style={{ color: "rgba(26,26,24,0.2)", fontSize: 18 }}>→</span>
-              <span style={{ color: "rgba(26,26,24,0.2)", fontSize: 18 }}>←</span>
             </div>
             <div className="loop-arrow-v" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 18 }}>↓</div>
 
@@ -90,12 +89,11 @@ export default function Home() {
               </FadeUp>
             </div>
 
-            {/* Core ↔ EdVisor arrows */}
-            <div className="loop-arrow-h" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8 }}>
-              <span style={{ color: "rgba(26,26,24,0.2)", fontSize: 18 }}>→</span>
+            {/* EdVisor → Core (pointing left on desktop, up on mobile) */}
+            <div className="loop-arrow-h" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
               <span style={{ color: "rgba(26,26,24,0.2)", fontSize: 18 }}>←</span>
             </div>
-            <div className="loop-arrow-v" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 18 }}>↓</div>
+            <div className="loop-arrow-v" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 18 }}>↑</div>
 
             <div className="loop-card" style={{ display: "flex", flexDirection: "column" }}>
               <FadeUp delay={0.3} style={{ flex: 1 }}>
