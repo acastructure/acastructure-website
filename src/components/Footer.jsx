@@ -21,7 +21,7 @@ export default function Footer() {
               <img src={acaLogo} alt="AcaStructure" style={{ height: 20, width: "auto", display: "block" }} />
             </Link>
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(26,26,24,0.5)", maxWidth: 220 }}>
-              Building clarity where it's needed most.
+              Building intelligence infrastructure for education.
             </p>
           </div>
 
