@@ -30,7 +30,7 @@ const AUDIENCE = [
   },
   {
     color: S.amber,
-    title: "Advisors & Articulation Officers",
+    title: "Advisors and Articulation Officers",
     eyebrow: "Human judgment stays at the center.",
     text: "Advisors and articulation professionals understand something data alone cannot capture: context. AcaStructure designs its intelligence around a human-in-the-loop model where technology can surface relationships, changes, and uncertainty while academic professionals retain the authority to interpret, validate, and decide.\n\nYour expertise doesn't sit outside the system. It helps make the system trustworthy.",
   },
