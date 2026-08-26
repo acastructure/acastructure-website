@@ -30,7 +30,7 @@ export default function Home() {
 
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             style={{ ...serif("clamp(38px, 6vw, 74px)"), marginBottom: 24, lineHeight: 1.06 }}>
-            The intelligence layer<br /><span style={{ color: S.red }}>behind education.</span>
+            The intelligence window<br /><span style={{ color: S.red }}>into education.</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}

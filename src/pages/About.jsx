@@ -209,13 +209,13 @@ export default function About() {
             <p style={{ ...inter(16), marginBottom: 16 }}>We started by trying to understand our own degrees.</p>
             <p style={{ ...inter(15), marginBottom: 16 }}>We came back to college as two veterans and encountered a familiar kind of problem: the information existed, but understanding how all of it fit together was unnecessarily difficult.</p>
             <p style={{ ...inter(15), marginBottom: 16 }}>So we started organizing it. Then connecting it. Then building tools around it.</p>
-            <p style={{ ...inter(15), marginBottom: 16 }}>And the deeper we went, the more interesting the problem became.</p>
+            <p style={{ ...inter(15), marginBottom: 16 }}>The deeper we went, the more interesting the problem became.</p>
             <p style={{ ...inter(15), marginBottom: 24 }}>What began as an attempt to understand our own academic pathways exposed a much larger question:</p>
             <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(18px, 2.5vw, 24px)", color: S.text, lineHeight: 1.5, marginBottom: 24 }}>
               How does an education system understand the millions of relationships that make it work?
             </p>
             <p style={{ ...inter(15), marginBottom: 16 }}>That's the question AcaStructure is now building around.</p>
-            <p style={{ ...inter(15) }}>Not because we believe we already have every answer. But because we believe better infrastructure can help students, educators, researchers, and institutions understand the system together.</p>
+            <p style={{ ...inter(15) }}>Not because we believe we already have every answer, because we believe better infrastructure can help students, educators, researchers, and institutions understand the system together.</p>
           </FadeUp>
         </div>
       </section>
