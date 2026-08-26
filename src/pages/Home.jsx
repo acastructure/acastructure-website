@@ -58,11 +58,11 @@ export default function Home() {
       <section className="section-pad" style={{ background: S.alt, paddingTop: 80, paddingBottom: 80, borderTop: `1px solid ${S.border}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <FadeUp><p style={{ ...mono(), textAlign: "center", marginBottom: 56 }}>How it works</p></FadeUp>
-          <div className="loop-cards">
+          <div className="loop-cards" style={{ alignItems: "stretch" }}>
 
-            <div className="loop-card">
-              <FadeUp delay={0.1}>
-                <div style={{ ...accentCard(S.green), textAlign: "center" }}>
+            <div className="loop-card" style={{ display: "flex", flexDirection: "column" }}>
+              <FadeUp delay={0.1} style={{ flex: 1 }}>
+                <div style={{ ...accentCard(S.green), textAlign: "center", height: "100%" }}>
                   <div style={iconBox(S.green)}>🎓</div>
                   <p style={{ ...mono(S.green), marginBottom: 8 }}>GradPath</p>
                   <p style={{ ...serif("17px"), marginBottom: 10 }}>Students</p>
@@ -71,12 +71,16 @@ export default function Home() {
               </FadeUp>
             </div>
 
-            <p className="loop-arrow-h" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
-            <p className="loop-arrow-v">↓</p>
+            {/* GradPath → Core, Core → EdVisor arrows on desktop */}
+            <div className="loop-arrow-h" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8 }}>
+              <span style={{ color: "rgba(26,26,24,0.2)", fontSize: 18 }}>→</span>
+              <span style={{ color: "rgba(26,26,24,0.2)", fontSize: 18 }}>←</span>
+            </div>
+            <p className="loop-arrow-v">↕</p>
 
-            <div className="loop-card">
-              <FadeUp delay={0.2}>
-                <div style={{ ...accentCard(S.red), textAlign: "center" }}>
+            <div className="loop-card" style={{ display: "flex", flexDirection: "column" }}>
+              <FadeUp delay={0.2} style={{ flex: 1 }}>
+                <div style={{ ...accentCard(S.red), textAlign: "center", height: "100%" }}>
                   <div style={iconBox(S.red)}>◈</div>
                   <p style={{ ...mono(S.red), marginBottom: 8 }}>The Core</p>
                   <p style={{ ...serif("17px"), marginBottom: 10 }}>Connected Intelligence</p>
@@ -86,12 +90,16 @@ export default function Home() {
               </FadeUp>
             </div>
 
-            <p className="loop-arrow-h" style={{ textAlign: "center", color: "rgba(26,26,24,0.2)", fontSize: 20 }}>→</p>
-            <p className="loop-arrow-v">↓</p>
+            {/* Core → EdVisor, EdVisor → Core arrows on desktop */}
+            <div className="loop-arrow-h" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8 }}>
+              <span style={{ color: "rgba(26,26,24,0.2)", fontSize: 18 }}>→</span>
+              <span style={{ color: "rgba(26,26,24,0.2)", fontSize: 18 }}>←</span>
+            </div>
+            <p className="loop-arrow-v">↕</p>
 
-            <div className="loop-card">
-              <FadeUp delay={0.3}>
-                <div style={{ ...accentCard(S.amber), textAlign: "center" }}>
+            <div className="loop-card" style={{ display: "flex", flexDirection: "column" }}>
+              <FadeUp delay={0.3} style={{ flex: 1 }}>
+                <div style={{ ...accentCard(S.amber), textAlign: "center", height: "100%" }}>
                   <div style={iconBox(S.amber)}>🏛️</div>
                   <p style={{ ...mono(S.amber), marginBottom: 8 }}>EdVisor</p>
                   <p style={{ ...serif("17px"), marginBottom: 10 }}>Institutions</p>
@@ -116,7 +124,7 @@ export default function Home() {
               Intelligence informs.<br /><span style={{ color: S.red }}>People decide.</span>
             </h2>
             <p style={{ ...inter(16), maxWidth: 580, margin: "0 auto 20px" }}>
-              Education requires context, judgment, and institutional authority. AcaStructure is designed around a human-in-the-loop model — using intelligence to surface relationships, changes, and uncertainty while keeping people and institutions at the center of consequential decisions.
+              Education requires context, judgment, and institutional authority. AcaStructure designs its intelligence around a human-in-the-loop model — using intelligence to surface relationships, changes, and uncertainty while keeping people and institutions at the center of consequential decisions.
             </p>
           </FadeUp>
         </div>
