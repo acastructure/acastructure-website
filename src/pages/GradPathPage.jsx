@@ -57,10 +57,7 @@ export default function GradPathPage() {
               onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.filter = "none"; }}>
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style={{ height: 40, width: "auto", display: "block" }} />
             </a>
-            <a href="#" style={{ display: "inline-block", textDecoration: "none", transition: "transform 0.2s, filter 0.2s" }}
-              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.filter = "drop-shadow(0 4px 12px rgba(26,26,24,0.2))"; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.filter = "none"; }}>
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{ height: 58, width: "auto", display: "block" }} />
+            <a href="https://play.google.com/store/apps/details?id=com.acastructure.gradpath" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", textDecoration: "none", transition: "transform 0.2s, filter 0.2s" }}
             </a>
           </motion.div>
         </div>
