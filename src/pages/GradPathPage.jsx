@@ -107,14 +107,14 @@ export default function GradPathPage() {
           <FadeUp>
             <p style={{ ...mono, color: S.dimmer, marginBottom: 12 }}>Pricing</p>
             <h2 style={{ ...serif("clamp(26px, 3.5vw, 42px)"), lineHeight: 1.1, marginBottom: 20 }}>
-              Free for life.<br /><span style={{ color: S.green }}>For every student.</span>
+              Free during open beta.
             </h2>
             <p style={{ ...inter("clamp(15px, 1.5vw, 17px)", S.dim), maxWidth: 520, margin: "0 auto 40px" }}>
-              Students already carry enough. Tuition, textbooks, fees — GradPath will never be one of them. Access to your degree pathway should never come with a price tag.
+              GradPath is free for all students during our open beta. As the platform grows, pricing may evolve — but access will always be designed with students in mind.
             </p>
             <div style={{ background: S.cardWhite, borderRadius: 16, padding: "28px 36px", border: `1.5px solid rgba(46,128,8,0.2)`, display: "inline-block" }}>
               <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(28px, 4vw, 48px)", color: S.green, marginBottom: 6 }}>$0</p>
-              <p style={{ ...mono, color: S.dimmer }}>No cost. No catch. Free for life.</p>
+              <p style={{ ...mono, color: S.dimmer }}>Free during open beta.</p>
             </div>
           </FadeUp>
         </div>
