@@ -45,7 +45,7 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               <Link to="/privacy-policy" style={linkStyle} onMouseEnter={hoverLink} onMouseLeave={leaveLink}>Privacy Policy</Link>
               <Link to="/terms-of-service" style={linkStyle} onMouseEnter={hoverLink} onMouseLeave={leaveLink}>Terms of Service</Link>
-              <Link to="/beta-program-agreement" style={linkStyle} onMouseEnter={hoverLink} onMouseLeave={leaveLink}>Beta Agreement</Link>
+              <Link to="/access-agreement" style={linkStyle} onMouseEnter={hoverLink} onMouseLeave={leaveLink}>Access Agreement</Link>
             </div>
           </div>
 

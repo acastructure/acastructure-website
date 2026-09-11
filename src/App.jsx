@@ -19,6 +19,7 @@ import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import BetaProgramAgreement from "./pages/BetaProgramAgreement";
+import AccessAgreement from "./pages/AccessAgreement";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/beta-program-agreement" element={<BetaProgramAgreement />} />
+        <Route path="/access-agreement" element={<AccessAgreement />} />
       </Routes>
       <Footer />
     </BrowserRouter>
