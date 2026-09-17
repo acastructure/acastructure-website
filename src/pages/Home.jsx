@@ -43,7 +43,7 @@ export default function Home() {
             <Link to="/gradpath" style={{ fontFamily: "Inter, sans-serif", fontSize: 15, fontWeight: 600, color: "#F2EFE8", background: "#1A1A18", padding: "13px 28px", borderRadius: 8, textDecoration: "none", transition: "box-shadow 0.2s, transform 0.2s" }}
               onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 4px 20px rgba(26,26,24,0.25)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}>
-              Get GradPath — Free
+              Get GradPath
             </Link>
             <Link to="/partners" style={ghostBtn}
               onMouseEnter={e => { e.currentTarget.style.color = S.text; e.currentTarget.style.borderColor = "rgba(26,26,24,0.4)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
@@ -66,7 +66,7 @@ export default function Home() {
                   <div style={iconBox(S.green)}>🎓</div>
                   <p style={{ ...mono(S.green), marginBottom: 8 }}>GradPath</p>
                   <p style={{ ...serif("17px"), marginBottom: 10 }}>Students</p>
-                  <p style={{ ...inter(13) }}>Academic intelligence made useful for students. Understand degree requirements, explore pathways, and see how academic decisions connect — free, always.</p>
+                  <p style={{ ...inter(13) }}>Academic intelligence made useful for students. Understand degree requirements, explore pathways, and see how academic decisions connect.</p>
                 </div>
               </FadeUp>
             </div>
@@ -141,7 +141,7 @@ export default function Home() {
                 <h2 style={{ ...serif("24px"), marginBottom: 10 }}>GradPath</h2>
                 <p style={{ ...inter(13), marginBottom: 8, fontWeight: 500, color: S.text }}>The student-facing window of AcaStructure.</p>
                 <p style={{ ...inter(13), marginBottom: 20 }}>Academic intelligence translated into something students can actually use — helping them understand requirements, pathways, progress, and the consequences of academic decisions.</p>
-                <p style={{ ...mono(S.green) }}>Free for every student →</p>
+                <p style={{ ...mono(S.green) }}>Get GradPath →</p>
               </div>
             </FadeUp>
             <FadeUp delay={0.2}>
