@@ -5,7 +5,7 @@ const sections = [
   },
   {
     title: "2. Access and Pricing",
-    body: "GradPath is currently free for all users during our open beta period. As the platform grows, pricing may evolve — but access will always be designed with students in mind. AcaStructure will provide reasonable notice of any changes to pricing or access terms."
+    body: "GradPath is free for the first 62 days (2 months) from the date of account creation. After the free period, continued access requires a subscription of $5.00 USD per month, billed through AcaStructure via Stripe. You may cancel your subscription at any time with no penalty. Upon cancellation, your access will continue through the end of the current billing period."
   },
   {
     title: "3. Software Disclaimer",

@@ -107,14 +107,20 @@ export default function GradPathPage() {
           <FadeUp>
             <p style={{ ...mono, color: S.dimmer, marginBottom: 12 }}>Pricing</p>
             <h2 style={{ ...serif("clamp(26px, 3.5vw, 42px)"), lineHeight: 1.1, marginBottom: 20 }}>
-              Free during open beta.
+              Free for your first 2 months.
             </h2>
             <p style={{ ...inter("clamp(15px, 1.5vw, 17px)", S.dim), maxWidth: 520, margin: "0 auto 40px" }}>
-              GradPath is free for all students during our open beta. As the platform grows, pricing may evolve — but access will always be designed with students in mind.
+              GradPath is free for the first 62 days. After that, continued access is $5.00 per month. Cancel anytime — no commitment required.
             </p>
-            <div style={{ background: S.cardWhite, borderRadius: 16, padding: "28px 36px", border: `1.5px solid rgba(46,128,8,0.2)`, display: "inline-block" }}>
-              <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(28px, 4vw, 48px)", color: S.green, marginBottom: 6 }}>$0</p>
-              <p style={{ ...mono, color: S.dimmer }}>Free during open beta.</p>
+            <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+              <div style={{ background: S.cardWhite, borderRadius: 16, padding: "28px 36px", border: `1.5px solid rgba(46,128,8,0.2)`, textAlign: "center" }}>
+                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(28px, 4vw, 48px)", color: S.green, marginBottom: 6 }}>$0</p>
+                <p style={{ ...mono, color: S.dimmer }}>First 62 days</p>
+              </div>
+              <div style={{ background: S.cardWhite, borderRadius: 16, padding: "28px 36px", border: `1.5px solid ${S.border}`, textAlign: "center" }}>
+                <p style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "clamp(28px, 4vw, 48px)", color: S.text, marginBottom: 6 }}>$5<span style={{ fontSize: "clamp(14px, 1.5vw, 18px)", fontWeight: 400 }}>/mo</span></p>
+                <p style={{ ...mono, color: S.dimmer }}>After that · Cancel anytime</p>
+              </div>
             </div>
           </FadeUp>
         </div>
